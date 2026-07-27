@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bw6f6neehyr6i"]
+
+[ext_resource type="Script" uid="uid://c8somgv8hyng5" path="res://Player/StateMachine/statemachine_class.gd" id="1_4ntmi"]
+[ext_resource type="Script" uid="uid://badlujppputea" path="res://Player/StateMachine/idle_state.gd" id="2_btcbx"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1175084695]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=205317139]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=555390773]
+
+[node name="StateMachine" type="Node" parent="." unique_id=217183640]
+script = ExtResource("1_4ntmi")
+
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=1746385252]
+script = ExtResource("2_btcbx")
+
+[node name="JumpState" type="Node" parent="StateMachine" unique_id=46833882]
+
+[node name="Fallstate" type="Node" parent="StateMachine" unique_id=418887991]
+
+[node name="MoveState" type="Node" parent="StateMachine" unique_id=1504082027]
