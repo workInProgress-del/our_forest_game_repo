@@ -15,16 +15,18 @@ var target_position: Vector2
 var folows_player:bool = false
 var folowing_objekt
 
+var collected = false
+
 func _ready():
 	randomize()
 	center = global_position
 	choose_new_target()
 
 func _physics_process(delta):
-	rand_move()
+	rand_move(delta)
 
 
-func rand_move():
+func rand_move(delta):
 	#eventuele acceleration
 	var direction = target_position - global_position
 	velocity = max_speed * direction
@@ -32,6 +34,10 @@ func rand_move():
 
 	if direction.length() < target_distance:
 		choose_new_target()
+		
+	var target_angle = global_position.angle_to_point(target_position)
+
+	rotation = lerp_angle(rotation, target_angle, 3 *delta)
 
 #	if cur_velocity > speed:
 #		cur_velocity = speed
@@ -57,9 +63,12 @@ func get_target(distance,angle):
 		) * distance
 
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if collected: return
+	
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
 		folows_player = true
 		folowing_objekt = body
 		print("eingesammelt")
+		collected = true
