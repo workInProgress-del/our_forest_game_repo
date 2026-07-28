@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://pba34xul3ali" path="res://Scenes/Motten/motten.gd" id="1_04rih"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="2_oeexw"]
-[ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="3_bc3ox"]
 [ext_resource type="Script" uid="uid://c3wee0xnr4deq" path="res://Scenes/Motten/Moten_ligh_animation.gd" id="3_oeexw"]
+[ext_resource type="Texture2D" uid="uid://brd1crvkuxy5w" path="res://Assets/Motte/motte ganz.png" id="4_oeexw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
 radius = 61.03278
@@ -26,7 +26,6 @@ _data = {
 radius = 107.935165
 
 [node name="Motten" type="CharacterBody2D" unique_id=1685672916 groups=["Motte"]]
-position = Vector2(573, 327)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_04rih")
@@ -43,7 +42,9 @@ texture = ExtResource("2_oeexw")
 script = ExtResource("3_oeexw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267900762]
-texture = ExtResource("3_bc3ox")
+position = Vector2(-1.9073486e-06, 3.8146973e-06)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_oeexw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=858150950]
 shape = SubResource("CircleShape2D_1vivr")
