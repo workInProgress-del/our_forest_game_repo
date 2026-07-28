@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dmseyaullgy36"]
+
+[ext_resource type="Script" uid="uid://pba34xul3ali" path="res://Scenes/Motten/motten.gd" id="1_04rih"]
+[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="2_oeexw"]
+[ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="3_bc3ox"]
+[ext_resource type="Script" uid="uid://c3wee0xnr4deq" path="res://Scenes/Motten/Moten_ligh_animation.gd" id="3_oeexw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
+radius = 61.03278
+
+[sub_resource type="Animation" id="Animation_oeexw"]
+resource_name = "Movement"
+length = 8.0
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_bc3ox"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6827h"]
+_data = {
+&"Movement": SubResource("Animation_oeexw"),
+&"RESET": SubResource("Animation_bc3ox")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
+radius = 107.935165
+
+[node name="Motten" type="CharacterBody2D" unique_id=1685672916 groups=["Motte"]]
+position = Vector2(573, 327)
+script = ExtResource("1_04rih")
+max_speed = 1.72
+acceleration = 0.17
+radius = 250.0
+target_distance = 30.0
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
+scale = Vector2(2.88, 2.97)
+color = Color(0.77254903, 0.77254903, 0.78039217, 1)
+energy = 2.2
+texture = ExtResource("2_oeexw")
+script = ExtResource("3_oeexw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267900762]
+texture = ExtResource("3_bc3ox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=858150950]
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=718198626]
+libraries/ = SubResource("AnimationLibrary_6827h")
+
+[node name="EinsammelArea2D" type="Area2D" parent="." unique_id=410402075 groups=["Motte"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EinsammelArea2D" unique_id=103243578]
+shape = SubResource("CircleShape2D_8vrlf")
+
+[connection signal="body_entered" from="EinsammelArea2D" to="." method="_on_einsammel_area_2d_body_entered"]
