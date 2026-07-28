@@ -1,10 +1,31 @@
 [gd_scene format=3 uid="uid://chmcg6ju3b1bm"]
 
+[ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="1_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="1_uhqqe"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00tjw"]
 
+[sub_resource type="Gradient" id="Gradient_sasra"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1vivr"]
+gradient = SubResource("Gradient_sasra")
+height = 67
+fill_from = Vector2(0.45882353, 1)
+fill_to = Vector2(0.44117647, 0)
+
 [node name="Test_Scene" type="Node2D" unique_id=1164999727]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=429927587]
+position = Vector2(538, 354.00003)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+energy = 1.84
+blend_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=380050032]
+position = Vector2(569, 341)
+scale = Vector2(4.745, 4.745)
+texture = ExtResource("1_ia1lp")
 
 [node name="RigidBody2D" type="StaticBody2D" parent="." unique_id=586283364]
 
@@ -13,3 +34,11 @@ position = Vector2(367, 617)
 shape = SubResource("WorldBoundaryShape2D_00tjw")
 
 [node name="CharacterBody2D" parent="." unique_id=1175084695 instance=ExtResource("1_uhqqe")]
+
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=284868295]
+scale = Vector2(-6.5571074, 3.7920067)
+blend_mode = 2
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+shadow_filter_smooth = 38.5
+texture = SubResource("GradientTexture2D_1vivr")
