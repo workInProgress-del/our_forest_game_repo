@@ -41,14 +41,20 @@ func rand_move():
 func choose_new_target():
 	var angle = randf_range(0.0, TAU)
 	var distance = sqrt(randf()) * radius
-	if global_position.distance_to(folowing_objekt) < max_player_distance:
-		target_position = center + Vector2(
+	if folowing_objekt:
+		if global_position.distance_to(folowing_objekt.position) < max_player_distance:
+			get_target(distance,angle)
+		else:
+			target_position = folowing_objekt.position
+	else:
+		get_target(distance,angle)
+
+
+func get_target(distance,angle):
+	target_position = center + Vector2(
 			cos(angle),
 			sin(angle)
 		) * distance
-	else:
-		target_position = folowing_objekt.position
-
 
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
 	var body_group = body.get_groups()

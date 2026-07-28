@@ -27,10 +27,12 @@ radius = 107.935165
 
 [node name="Motten" type="CharacterBody2D" unique_id=1685672916 groups=["Motte"]]
 position = Vector2(573, 327)
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_04rih")
 max_speed = 1.72
 acceleration = 0.17
-radius = 250.0
+max_player_distance = 169
 target_distance = 30.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
@@ -50,6 +52,7 @@ shape = SubResource("CircleShape2D_1vivr")
 libraries/ = SubResource("AnimationLibrary_6827h")
 
 [node name="EinsammelArea2D" type="Area2D" parent="." unique_id=410402075 groups=["Motte"]]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EinsammelArea2D" unique_id=103243578]
 shape = SubResource("CircleShape2D_8vrlf")
