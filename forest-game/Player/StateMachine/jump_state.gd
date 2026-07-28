@@ -11,7 +11,7 @@ func physics_update(delta: float) -> void:
 	if not jump_started: return
 	
 	var input_direction_x := Input.get_axis("move_left", "move_right")
-	player.velocity.x = player.speed * input_direction_x
+	player.velocity.x = player.speed * input_direction_x * player.air_control
 	player.velocity.y += player.gravity * delta
 	player.move_and_slide()
 

@@ -33,6 +33,10 @@ func _transition_to_next_state(target_state_path: String, data: Dictionary = {})
 		return
 
 	var previous_state_path := state.name
+	
+	# If exit returns a signal or requires awaiting, handle it polymorphically if needed,
+	# or let the state manage its own transition pause.
 	state.exit()
+		
 	state = get_node(target_state_path)
 	state.enter(previous_state_path, data)
