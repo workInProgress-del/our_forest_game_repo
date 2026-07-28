@@ -2,16 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="1_ia1lp"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="1_uhqqe"]
+[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="3_50ct6"]
+[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="4_hb2xm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00tjw"]
-
-[sub_resource type="Gradient" id="Gradient_sasra"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1vivr"]
-gradient = SubResource("Gradient_sasra")
-height = 67
-fill_from = Vector2(0.45882353, 1)
-fill_to = Vector2(0.44117647, 0)
 
 [node name="Test_Scene" type="Node2D" unique_id=1164999727]
 
@@ -35,10 +29,9 @@ shape = SubResource("WorldBoundaryShape2D_00tjw")
 
 [node name="CharacterBody2D" parent="." unique_id=1175084695 instance=ExtResource("1_uhqqe")]
 
-[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=284868295]
-scale = Vector2(-6.5571074, 3.7920067)
-blend_mode = 2
-shadow_enabled = true
-shadow_color = Color(0, 0, 0, 1)
-shadow_filter_smooth = 38.5
-texture = SubResource("GradientTexture2D_1vivr")
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D" unique_id=231748646]
+scale = Vector2(16.333336, 15.527777)
+energy = 2.19
+texture = ExtResource("3_50ct6")
+
+[node name="Motten" parent="." unique_id=1685672916 instance=ExtResource("4_hb2xm")]

@@ -179,7 +179,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1175084695]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1175084695 groups=["Player"]]
 scale = Vector2(0.36, 0.36)
 script = ExtResource("1_btcbx")
 
