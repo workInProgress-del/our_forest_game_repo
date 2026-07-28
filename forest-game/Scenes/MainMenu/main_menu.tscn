@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://7sfo3qoh8dn5"]
 
-[ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="1_06t4h"]
-[ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://MainMenu/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://Scenes/MainMenu/main_menu.gd" id="1_3w4mj"]
+[ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="2_5de1l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_470mv"]
 font_size = 284
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_7vrkn")
+script = ExtResource("1_3w4mj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=730100429]
 layout_mode = 0
@@ -21,7 +21,7 @@ offset_left = -1.9999998
 offset_right = 269.0
 offset_bottom = 180.0
 scale = Vector2(4.305, 4.305)
-texture = ExtResource("1_06t4h")
+texture = ExtResource("2_5de1l")
 
 [node name="Label" type="Label" parent="." unique_id=481091922]
 layout_mode = 1
