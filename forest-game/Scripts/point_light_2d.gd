@@ -10,9 +10,7 @@ func _physics_process(delta: float) -> void:
 	if energy > 0:
 		energy -= 0.03
 	else:
-		var timer = Timer.new()
-		timer.start(3.0)
-		timer.connect("finished", time_out)
+		time_out()
 
 func time_out():
 		GameManager.new_game()

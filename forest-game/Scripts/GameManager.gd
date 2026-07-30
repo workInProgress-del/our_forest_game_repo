@@ -1,5 +1,6 @@
 extends Node
 
+
 var player_moths = 0
 
 signal added_player_moths
@@ -25,4 +26,4 @@ func end_game():
 	game_ended.emit()
 	
 func new_game():
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Scenes/MainMenu/GameOverScreen.tscn")

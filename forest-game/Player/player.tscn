@@ -157,7 +157,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8mwp6")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"move",
 "speed": 5.0
 }, {
@@ -213,4 +213,4 @@ script = ExtResource("4_gwnis")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1375241025]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_1vivr")
-animation = &"land"
+animation = &"move"
