@@ -37,7 +37,7 @@ target_distance = 30.0
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
 scale = Vector2(2.88, 2.97)
 color = Color(0.77254903, 0.77254903, 0.78039217, 1)
-energy = 2.2
+energy = 2.02
 texture = ExtResource("2_oeexw")
 script = ExtResource("3_oeexw")
 

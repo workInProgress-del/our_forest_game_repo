@@ -21,4 +21,4 @@ func _process(_delta):
 	die()
 
 func die():
-	energy -= 0.03
+	energy -= 0.01
