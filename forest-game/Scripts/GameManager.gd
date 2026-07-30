@@ -6,11 +6,11 @@ signal added_player_moths
 signal deleted_player_moths
 signal game_ended
 
-
-
-
-
+func _ready() -> void:
+	player_moths = 3
 	
+func _process(delta: float) -> void:
+	print(player_moths)
 func add_player_moths(amount: int, new_moth: bool):
 	player_moths += amount
 	if not new_moth: return

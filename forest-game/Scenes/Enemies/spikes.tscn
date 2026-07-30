@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b4d8xdxmp4lt2"]
 
 [ext_resource type="Script" uid="uid://yhyera7jhblu" path="res://Scripts/spikes.gd" id="1_gwqs2"]
-[ext_resource type="Texture2D" uid="uid://d00chobcqj17l" path="res://Assets/OIP.jpg" id="2_0qgod"]
+[ext_resource type="Texture2D" uid="uid://bbi7h04080ipt" path="res://Assets/Level1/Bush (52).png" id="2_tdnaf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
 size = Vector2(247, 144)
@@ -13,9 +13,9 @@ script = ExtResource("1_gwqs2")
 position = Vector2(113.5, 62)
 shape = SubResource("RectangleShape2D_1vivr")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=540208500]
-offset_right = 236.0
-offset_bottom = 132.0
-texture = ExtResource("2_0qgod")
+[node name="TextureRect" type="Sprite2D" parent="." unique_id=12830113]
+position = Vector2(116, 64)
+scale = Vector2(4.505, 4.505)
+texture = ExtResource("2_tdnaf")
 
 [connection signal="body_entered" from="." to="." method="_on_area_2d_body_entered"]
