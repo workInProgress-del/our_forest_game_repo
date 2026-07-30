@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*uid://cmo6a6w4r6kps"
+AudioPlayer="*uid://i7b2y84k3rdx"
 
 [display]
 
@@ -26,7 +27,7 @@ window/stretch/aspect="expand"
 
 [gui]
 
-theme/custom="uid://cmc8bo61sges4"
+theme/custom="uid://cv8m8fl5bg3gp"
 
 [input]
 

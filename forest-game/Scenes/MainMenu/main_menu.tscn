@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://7sfo3qoh8dn5"]
 
 [ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://Scenes/MainMenu/main_menu.gd" id="1_3w4mj"]
+[ext_resource type="PackedScene" uid="uid://i7b2y84k3rdx" path="res://Scenes/audio_player.tscn" id="3_0qgbs"]
 [ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="3_qgdf6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_470mv"]
@@ -184,6 +185,8 @@ text = "Quit"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1244862845]
 libraries/ = SubResource("AnimationLibrary_0qgbs")
+
+[node name="AudioPlayer" parent="." unique_id=622186961 instance=ExtResource("3_0qgbs")]
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
