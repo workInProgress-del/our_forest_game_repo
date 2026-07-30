@@ -3,10 +3,57 @@
 [ext_resource type="Script" uid="uid://pba34xul3ali" path="res://Scenes/Motten/motten.gd" id="1_04rih"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="2_oeexw"]
 [ext_resource type="Script" uid="uid://c3wee0xnr4deq" path="res://Scenes/Motten/Moten_ligh_animation.gd" id="3_oeexw"]
-[ext_resource type="Texture2D" uid="uid://brd1crvkuxy5w" path="res://Assets/Motte/motte ganz.png" id="4_oeexw"]
+[ext_resource type="Texture2D" uid="uid://bafu3x35hqm7l" path="res://Assets/Motte/mottenflügel unten.png" id="4_4lloy"]
+[ext_resource type="Texture2D" uid="uid://cytvhim3g3ls7" path="res://Assets/Motte/mottenflügel obenlinks.png" id="5_47otq"]
+[ext_resource type="Texture2D" uid="uid://qvr32oj32tiu" path="res://Assets/Motte/mottenflügel obenrechts.png" id="6_yilrc"]
+[ext_resource type="Texture2D" uid="uid://ba1iruuv2s25x" path="res://Assets/Motte/mottenoberkörper und fühler.png" id="7_y3hdc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
 radius = 61.03278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
+radius = 107.935165
+
+[sub_resource type="Animation" id="Animation_gb15c"]
+resource_name = "AnimationMovement"
+length = 0.19999999999999998
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texturen/MottenflügelObenlinks:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.10174929, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.46240902, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texturen/MottenflügelObenrechts:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.10174929, 0.1998209),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.46860924, -0.00048291896]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texturen/MottenflügelUnten:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.185, 0.22), Vector2(0.22, 0.22)]
+}
 
 [sub_resource type="Animation" id="Animation_oeexw"]
 resource_name = "Movement"
@@ -15,15 +62,49 @@ loop_mode = 1
 
 [sub_resource type="Animation" id="Animation_bc3ox"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Texturen/MottenflügelObenlinks:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Texturen/MottenflügelObenrechts:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Texturen/MottenflügelUnten:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.22, 0.22)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6827h"]
 _data = {
+&"AnimationMovement": SubResource("Animation_gb15c"),
 &"Movement": SubResource("Animation_oeexw"),
 &"RESET": SubResource("Animation_bc3ox")
 }
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
-radius = 107.935165
 
 [node name="Motten" type="CharacterBody2D" unique_id=1685672916 groups=["Motte"]]
 scale = Vector2(0.735, 0.735)
@@ -37,29 +118,53 @@ radius = 300.0
 target_distance = 30.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
-scale = Vector2(5.15, 5.314)
+position = Vector2(8.163269, 5.442177)
+scale = Vector2(3.698, 3.854)
 color = Color(0.77254903, 0.77254903, 0.78039217, 1)
 energy = 2.64
 blend_mode = 2
 texture = ExtResource("2_oeexw")
 script = ExtResource("3_oeexw")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267900762]
-position = Vector2(-1.9073486e-06, 3.8146973e-06)
-rotation = 1.5707964
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("4_oeexw")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=858150950]
+visible = false
 shape = SubResource("CircleShape2D_1vivr")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=718198626]
-libraries/ = SubResource("AnimationLibrary_6827h")
-
 [node name="EinsammelArea2D" type="Area2D" parent="." unique_id=410402075 groups=["Motte"]]
+visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EinsammelArea2D" unique_id=103243578]
 shape = SubResource("CircleShape2D_8vrlf")
+
+[node name="Texturen" type="Node2D" parent="." unique_id=338316850]
+position = Vector2(-13.605441, 12.244898)
+rotation = 1.5707964
+
+[node name="MottenflügelUnten" type="Sprite2D" parent="Texturen" unique_id=1212179038]
+position = Vector2(-16.32653, -10.884355)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("4_4lloy")
+
+[node name="MottenflügelObenlinks" type="Sprite2D" parent="Texturen" unique_id=991364644]
+position = Vector2(-17.687073, -34.013607)
+scale = Vector2(0.21999997, 0.21999997)
+texture = ExtResource("5_47otq")
+offset = Vector2(6.184326, 123.68585)
+
+[node name="MottenflügelObenrechts" type="Sprite2D" parent="Texturen" unique_id=479148321]
+position = Vector2(-5.4421763, -32.653057)
+scale = Vector2(0.21999994, 0.21999994)
+texture = ExtResource("6_yilrc")
+offset = Vector2(-49.474327, 109.727554)
+
+[node name="MottenoberkörperUndFühler" type="Sprite2D" parent="Texturen" unique_id=2053481850]
+position = Vector2(-16.326529, -8.512999)
+scale = Vector2(0.21999997, 0.21999997)
+texture = ExtResource("7_y3hdc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=718198626]
+libraries/ = SubResource("AnimationLibrary_6827h")
+autoplay = &"AnimationMovement"
 
 [connection signal="body_entered" from="EinsammelArea2D" to="." method="_on_einsammel_area_2d_body_entered"]
