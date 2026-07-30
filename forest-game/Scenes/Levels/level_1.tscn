@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://b1dncvvdv7ntp"]
 
-[ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
-[ext_resource type="Texture2D" uid="uid://bni42b25uspj7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" id="2_8ffim"]
-[ext_resource type="Texture2D" uid="uid://dkwgr82sejmqi" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" id="3_xfk5q"]
-[ext_resource type="Texture2D" uid="uid://cdyto5v6pgje7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" id="4_7p6j4"]
-[ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_6444e"]
-[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_lsmp6"]
-[ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_xrdnt"]
-[ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="8_af3po"]
-[ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="9_uy8f0"]
-[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_6r07y"]
-[ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_6ioyp"]
+[ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_afv7b"]
+[ext_resource type="Texture2D" uid="uid://bni42b25uspj7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" id="2_7r2dd"]
+[ext_resource type="Texture2D" uid="uid://dkwgr82sejmqi" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" id="3_k2mw1"]
+[ext_resource type="Texture2D" uid="uid://cdyto5v6pgje7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" id="4_tjl6l"]
+[ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_3628d"]
+[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_irw6p"]
+[ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_31phq"]
+[ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="8_7hll7"]
+[ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="9_fayjm"]
+[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_nojx8"]
+[ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_vvknj"]
+[ext_resource type="PackedScene" uid="uid://m3ru70cpnhd8" path="res://Scenes/UI/story_ui.tscn" id="12_ad63i"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 
@@ -34,47 +35,47 @@ scroll_offset = Vector2(-7, -125)
 [node name="ParallaxDemonWoodsBg" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1585242589]
 position = Vector2(608, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg2" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2341620]
 position = Vector2(2000, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg3" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1458512369]
 position = Vector2(4000, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg4" type="Sprite2D" parent="Background/Parallax2D2" unique_id=841935380]
 position = Vector2(3000, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg7" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2051980136]
 position = Vector2(-718.5641, 348.15384)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg8" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1789209960]
 position = Vector2(-1916.0256, 348.0769)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg10" type="Sprite2D" parent="Background/Parallax2D2" unique_id=530762658]
 position = Vector2(-718.5641, 348.15384)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg5" type="Sprite2D" parent="Background/Parallax2D2" unique_id=30600919]
 position = Vector2(6000, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="ParallaxDemonWoodsBg6" type="Sprite2D" parent="Background/Parallax2D2" unique_id=839196835]
 position = Vector2(5000, 348)
 scale = Vector2(2.9541667, 3.139706)
-texture = ExtResource("1_vk57k")
+texture = ExtResource("1_afv7b")
 
 [node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=317877141]
 z_index = -29
@@ -85,62 +86,62 @@ scroll_offset = Vector2(-489, -125)
 [node name="ParallaxDemonWoodsCloseTrees" type="Sprite2D" parent="Background/Parallax2D" unique_id=1859578431]
 position = Vector2(-200, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D" unique_id=1728014586]
 position = Vector2(900, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees3" type="Sprite2D" parent="Background/Parallax2D" unique_id=820574980]
 position = Vector2(2000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees4" type="Sprite2D" parent="Background/Parallax2D" unique_id=1761132947]
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees5" type="Sprite2D" parent="Background/Parallax2D" unique_id=231982809]
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees6" type="Sprite2D" parent="Background/Parallax2D" unique_id=995420040]
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees7" type="Sprite2D" parent="Background/Parallax2D" unique_id=537927994]
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees8" type="Sprite2D" parent="Background/Parallax2D" unique_id=1304435690]
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees9" type="Sprite2D" parent="Background/Parallax2D" unique_id=798798529]
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees10" type="Sprite2D" parent="Background/Parallax2D" unique_id=1059608047]
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D" unique_id=117671088]
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D" unique_id=30360968]
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+texture = ExtResource("2_7r2dd")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=1552170250]
 z_index = -29
@@ -152,73 +153,73 @@ scroll_offset = Vector2(-489, -125)
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(-200, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D3" unique_id=644390780]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(900, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees3" type="Sprite2D" parent="Background/Parallax2D3" unique_id=94948705]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(2000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees4" type="Sprite2D" parent="Background/Parallax2D3" unique_id=457004741]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees5" type="Sprite2D" parent="Background/Parallax2D3" unique_id=569001422]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees6" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1844377703]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(3000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees7" type="Sprite2D" parent="Background/Parallax2D3" unique_id=2119906624]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees8" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1953991563]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees9" type="Sprite2D" parent="Background/Parallax2D3" unique_id=854065541]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(6000, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees10" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1224255094]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1992321535]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D3" unique_id=847175268]
 self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
+texture = ExtResource("3_k2mw1")
 
 [node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=212642542]
 visible = false
@@ -231,27 +232,27 @@ scroll_offset = Vector2(-482, -296)
 self_modulate = Color(0, 0, 0.33333334, 0.57254905)
 position = Vector2(-200, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
+texture = ExtResource("4_tjl6l")
 
 [node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D4" unique_id=236779149]
 self_modulate = Color(0, 0, 0.33333334, 0.57254905)
 position = Vector2(900, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
+texture = ExtResource("4_tjl6l")
 
 [node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1305312312]
 self_modulate = Color(0, 0, 0.33333334, 0.57254905)
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
+texture = ExtResource("4_tjl6l")
 
 [node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1601612732]
 self_modulate = Color(0, 0, 0.33333334, 0.57254905)
 position = Vector2(4500, 346)
 scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
+texture = ExtResource("4_tjl6l")
 
-[node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_6444e")]
+[node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_3628d")]
 position = Vector2(1.0000305, 5.000122)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=994735179]
@@ -259,8 +260,8 @@ position = Vector2(0, 11.11145)
 scale = Vector2(6.028, 5.726)
 energy = 2.65
 blend_mode = 2
-texture = ExtResource("6_lsmp6")
-script = ExtResource("7_xrdnt")
+texture = ExtResource("6_irw6p")
+script = ExtResource("7_31phq")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1561387044]
 offset = Vector2(0, -100)
@@ -273,13 +274,13 @@ shape = SubResource("WorldBoundaryShape2D_1vivr")
 
 [node name="PlayerMoths" type="Node" parent="." unique_id=209809334]
 unique_name_in_owner = true
-script = ExtResource("8_af3po")
+script = ExtResource("8_7hll7")
 
 [node name="CollectableMoths" type="Node" parent="." unique_id=186812114]
 unique_name_in_owner = true
-script = ExtResource("9_uy8f0")
+script = ExtResource("9_fayjm")
 
-[node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("10_6r07y")]
+[node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("10_nojx8")]
 position = Vector2(715, 495.00003)
 scale = Vector2(0.73, 0.73)
 max_player_distance = 284
@@ -287,5 +288,8 @@ min_target_distance = 130.0
 
 [node name="Enemies" type="Node" parent="." unique_id=2069477343]
 
-[node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("11_6ioyp")]
+[node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("11_vvknj")]
 position = Vector2(254, 520)
+
+[node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("12_ad63i")]
+position = Vector2(85, 554)

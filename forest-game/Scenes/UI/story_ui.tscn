@@ -6,16 +6,13 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
 radius = 109.29318
 
-[sub_resource type="LabelSettings" id="LabelSettings_0y2ab"]
-font_size = 40
-
 [sub_resource type="Animation" id="Animation_3pwli"]
 resource_name = "Popup"
 length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("UI:position")
+tracks/0/path = NodePath("CanvasLayer/UI:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -30,7 +27,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("UI:position")
+tracks/0/path = NodePath("CanvasLayer/UI:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -46,7 +43,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("UI:position")
+tracks/0/path = NodePath("CanvasLayer/UI:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -63,12 +60,16 @@ _data = {
 &"popdown": SubResource("Animation_0ae0d")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_0y2ab"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+
 [node name="Story_UI" type="Node2D" unique_id=1092067955]
 script = ExtResource("1_3pwli")
 label_right_new_text = "  Schon wieder eins von den Viechern! Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
 label_left_new_text = " Schon wieder eins von den Viechern. Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
 book_texture = ExtResource("1_l581s")
-new_title = " 2.10.1840 Tag 1 meiner Aufzeichnungen im Wald"
+new_title = " 2. 10. 1840              Tag 1"
 
 [node name="obticleTexture" type="Sprite2D" parent="." unique_id=849316654]
 unique_name_in_owner = true
@@ -81,7 +82,13 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectingArea2D" unique_id=557268233]
 shape = SubResource("CircleShape2D_1vivr")
 
-[node name="UI" type="Control" parent="." unique_id=1752288237]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1434285563]
+libraries/ = SubResource("AnimationLibrary_0ae0d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=858164661]
+
+[node name="UI" type="Control" parent="CanvasLayer" unique_id=1752288237]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(1152, 648)
 custom_maximum_size = Vector2(1152, 648)
@@ -93,7 +100,7 @@ offset_bottom = 1296.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="UI" unique_id=621495377]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/UI" unique_id=621495377]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 70.0
@@ -102,7 +109,7 @@ offset_right = 1082.0
 offset_bottom = 628.0
 texture = ExtResource("1_l581s")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=669852129]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI" unique_id=669852129]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -114,16 +121,16 @@ theme_override_constants/margin_top = 42
 theme_override_constants/margin_right = 149
 theme_override_constants/margin_bottom = 42
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer" unique_id=1881212415]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/MarginContainer" unique_id=1881212415]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=1273250791]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/MarginContainer/HBoxContainer" unique_id=1273250791]
 custom_maximum_size = Vector2(427, -1)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=838625465]
+[node name="Label" type="Label" parent="CanvasLayer/UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=838625465]
 unique_name_in_owner = true
 custom_maximum_size = Vector2(-1, 427)
 layout_mode = 2
@@ -131,32 +138,19 @@ size_flags_vertical = 3
 text = " 2.10.1840 Tag 1 meiner Aufzeichnungen im Wald"
 label_settings = SubResource("LabelSettings_0y2ab")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1731208331]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1731208331]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 7.52
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/bold_italics_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
-theme_override_font_sizes/mono_font_size = 40
 text = "hkgcxfuaWD"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="UI/MarginContainer/HBoxContainer" unique_id=407567713]
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/UI/MarginContainer/HBoxContainer" unique_id=407567713]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 40
-theme_override_font_sizes/bold_font_size = 40
-theme_override_font_sizes/bold_italics_font_size = 40
-theme_override_font_sizes/italics_font_size = 40
-theme_override_font_sizes/mono_font_size = 40
 text = "hkgcxfuaWD"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1434285563]
-libraries/ = SubResource("AnimationLibrary_0ae0d")
 
 [connection signal="body_entered" from="DetectingArea2D" to="." method="_on_detecting_area_2d_body_entered"]
 [connection signal="body_exited" from="DetectingArea2D" to="." method="_on_detecting_area_2d_body_exited"]

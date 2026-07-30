@@ -10,7 +10,7 @@ extends Node2D
 @onready var label_right = %RichTextLabel2
 @onready var obsticle = %obticleTexture
 @onready var book = %TextureRect
-@onready var UI = $UI
+@onready var UI = %UI
 @onready var title = %Label
 
 var player_in_reach:bool = true
