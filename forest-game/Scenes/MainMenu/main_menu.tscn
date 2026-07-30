@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://7sfo3qoh8dn5"]
 
 [ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://Scenes/MainMenu/main_menu.gd" id="1_3w4mj"]
-[ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="2_5de1l"]
 [ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="3_qgdf6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_470mv"]
@@ -23,18 +22,18 @@ offset_left = -1.9999998
 offset_right = 269.0
 offset_bottom = 180.0
 scale = Vector2(4.305, 4.305)
-texture = ExtResource("2_5de1l")
 
 [node name="Label" type="Label" parent="." unique_id=481091922]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -238.0
-offset_top = 18.0
-offset_right = 237.5
-offset_bottom = 420.0
+offset_left = -343.0
+offset_top = 79.0
+offset_right = 295.0
+offset_bottom = 481.0
 grow_horizontal = 2
+rotation = -0.09614354
 text = "Tenebra"
 label_settings = SubResource("LabelSettings_470mv")
 
