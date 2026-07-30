@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm2ls4c8k30ht"
-path="res://.godot/imported/motte ganz.png-40aee4e1a53faf9740b0107b6d788bc8.ctex"
+uid="uid://crtmttnxj722y"
+path="res://.godot/imported/Bush (321).png-11e42f590d4e1238a22ce77e4146e4b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/motte ganz.png"
-dest_files=["res://.godot/imported/motte ganz.png-40aee4e1a53faf9740b0107b6d788bc8.ctex"]
+source_file="res://Assets/Level1/Bush (321).png"
+dest_files=["res://.godot/imported/Bush (321).png-11e42f590d4e1238a22ce77e4146e4b8.ctex"]
 
 [params]
 

@@ -5,8 +5,8 @@ extends Node
 func _ready() -> void:
 	GameManager.added_player_moths.connect(on_add_player_moths)
 	GameManager.deleted_player_moths.connect(on_delete_player_moths)
-	on_add_player_moths(2)
-
+	on_add_player_moths(3)
+	GameManager.player_moths = 3
 
 func on_add_player_moths(amount: int):
 	var count = 0
@@ -15,6 +15,7 @@ func on_add_player_moths(amount: int):
 		var new_moth = moth_scene.instantiate()
 		add_child(new_moth)
 		new_moth.folowing_objekt = get_parent().get_node("Player")
+		new_moth.collected = true
 	
 		
 func on_delete_player_moths(amount: int):

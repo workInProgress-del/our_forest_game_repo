@@ -10,7 +10,12 @@ func _physics_process(delta: float) -> void:
 	if energy > 0:
 		energy -= 0.03
 	else:
-		GameManager.new_game()
+		var timer = Timer.new()
+		timer.start(3.0)
+		timer.connect("finished", time_out)
 
+func time_out():
+		GameManager.new_game()
+		
 func death_screen():
 	died = true

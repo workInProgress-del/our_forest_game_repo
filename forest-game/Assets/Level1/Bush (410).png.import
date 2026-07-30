@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d00chobcqj17l"
-path="res://.godot/imported/OIP.jpg-0124c1acc83a582512864d3e687f24da.ctex"
+uid="uid://3qkdibg01bq"
+path="res://.godot/imported/Bush (410).png-ebd4c7288273870d761534cc301ac2b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/OIP.jpg"
-dest_files=["res://.godot/imported/OIP.jpg-0124c1acc83a582512864d3e687f24da.ctex"]
+source_file="res://Assets/Level1/Bush (410).png"
+dest_files=["res://.godot/imported/Bush (410).png-ebd4c7288273870d761534cc301ac2b3.ctex"]
 
 [params]
 

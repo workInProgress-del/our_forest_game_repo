@@ -77,7 +77,7 @@ func die():
 func now_dead():
 	queue_free()
 	
-func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
+func _on_einsammel_area_2d_body_entered(body: Node2D) -> void:
 	if collected: return
 	
 	var body_group = body.get_groups()
