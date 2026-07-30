@@ -6,8 +6,7 @@ class_name Player extends CharacterBody2D
 @export var air_control := 0.9
 @onready var animation_player: AnimatedSprite2D = %AnimatedSprite2D
 
-func _ready() -> void:
-	GameManager.add_player_moths(2)
+
 
 func take_damage(amount: int) -> void:
 	GameManager.delete_player_moths(amount)

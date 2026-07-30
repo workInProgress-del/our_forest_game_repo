@@ -71,14 +71,19 @@ func get_target(distance,angle):
 		) * distance
 
 func die():
-	queue_free()
+	$PointLight2D.died = true
 
+	
+func now_dead():
+	queue_free()
+	
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if collected: return
 	
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
+		GameManager.add_player_moths(1, false)
 		collected = true
 		folowing_objekt = body
 		var new_parent = get_parent().get_parent().get_node("PlayerMoths")

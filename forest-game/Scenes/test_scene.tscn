@@ -4,7 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="1_uhqqe"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="3_50ct6"]
 [ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="4_hb2xm"]
+[ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="4_rdbpf"]
 [ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="5_ak5v8"]
+[ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="6_oho3u"]
 [ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="6_x033f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00tjw"]
@@ -35,6 +37,7 @@ shape = SubResource("WorldBoundaryShape2D_00tjw")
 scale = Vector2(16.333336, 15.527777)
 energy = 2.19
 texture = ExtResource("3_50ct6")
+script = ExtResource("4_rdbpf")
 
 [node name="PlayerMoths" type="Node" parent="." unique_id=113288693]
 unique_name_in_owner = true
@@ -42,6 +45,7 @@ script = ExtResource("5_ak5v8")
 
 [node name="CollectableMoths" type="Node" parent="." unique_id=1637047875]
 unique_name_in_owner = true
+script = ExtResource("6_oho3u")
 
 [node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("4_hb2xm")]
 position = Vector2(573, 327)
