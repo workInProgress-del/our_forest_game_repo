@@ -1,74 +1,28 @@
 [gd_scene format=3 uid="uid://7sfo3qoh8dn5"]
 
-[ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://Scenes/MainMenu/main_menu.gd" id="1_3w4mj"]
-[ext_resource type="Texture2D" uid="uid://5e4vpbr5cec2" path="res://Assets/background_test.webp" id="2_5de1l"]
-[ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="3_qgdf6"]
+[sub_resource type="LabelSettings" id="LabelSettings_1vivr"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_470mv"]
-font = ExtResource("3_qgdf6")
-font_size = 284
-
-[node name="Main_Menu" type="Control" unique_id=180721016]
+[node name="GameOverScreen" type="Control" unique_id=911999075]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3w4mj")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=730100429]
-layout_mode = 0
-offset_left = -1.9999998
-offset_right = 269.0
-offset_bottom = 180.0
-scale = Vector2(4.305, 4.305)
-texture = ExtResource("2_5de1l")
-
-[node name="Label" type="Label" parent="." unique_id=481091922]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1577354965]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -238.0
-offset_top = 18.0
-offset_right = 237.5
-offset_bottom = 420.0
-grow_horizontal = 2
-text = "Tenebra"
-label_settings = SubResource("LabelSettings_470mv")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1863476544]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -206.0
-offset_top = -373.0
-offset_right = 207.0
-offset_bottom = -22.0
 grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 12
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
-[node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=838482708]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Play"
-
-[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=499153153]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Settings
-"
-
-[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=997468478]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Quit"
-
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="Label" type="Label" parent="." unique_id=1505973681]
+layout_mode = 0
+offset_left = -10.0
+offset_right = 34.0
+offset_bottom = 18.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_1vivr")
