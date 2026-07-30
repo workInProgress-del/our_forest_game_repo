@@ -12,10 +12,65 @@ font_size = 28
 [sub_resource type="LabelSettings" id="LabelSettings_3pwli"]
 font_size = 28
 
+[sub_resource type="Animation" id="Animation_3pwli"]
+resource_name = "Popup"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 648), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0y2ab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 648)]
+}
+
+[sub_resource type="Animation" id="Animation_0ae0d"]
+resource_name = "popdown"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 648)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ae0d"]
+_data = {
+&"Popup": SubResource("Animation_3pwli"),
+&"RESET": SubResource("Animation_0y2ab"),
+&"popdown": SubResource("Animation_0ae0d")
+}
+
 [node name="Story_UI" type="Node2D" unique_id=1092067955]
 script = ExtResource("1_3pwli")
-label_right_new_text = "Test text_1"
+label_right_new_text = "Hallo_2"
 label_left_new_text = "Test text_2"
+book_texture = ExtResource("1_l581s")
 
 [node name="obticleTexture" type="Sprite2D" parent="." unique_id=849316654]
 unique_name_in_owner = true
@@ -29,12 +84,13 @@ collision_mask = 8
 shape = SubResource("CircleShape2D_1vivr")
 
 [node name="UI" type="Control" parent="." unique_id=1752288237]
+visible = false
 custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 0
-offset_top = -1.0
+offset_top = 648.0
 offset_right = 1152.0
-offset_bottom = 647.0
+offset_bottom = 1296.0005
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -89,3 +145,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Das Ist ein test text"
 label_settings = SubResource("LabelSettings_3pwli")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1434285563]
+libraries/ = SubResource("AnimationLibrary_0ae0d")
+
+[connection signal="body_entered" from="DetectingArea2D" to="." method="_on_detecting_area_2d_body_entered"]
+[connection signal="body_exited" from="DetectingArea2D" to="." method="_on_detecting_area_2d_body_exited"]
