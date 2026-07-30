@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dsl1ixyn5wbxa"
-path="res://.godot/imported/TrovicalCalmFreeRegular-0vam4.otf-a704a2d35c4f6ca7b7dba064d9205036.fontdata"
+path="res://.godot/imported/TrovicalCalmFreeRegular-0vam4.otf-ad09366681d36206a487d395314c368e.fontdata"
 
 [deps]
 
-source_file="res://Assets/TrovicalCalmFreeRegular-0vam4.otf"
-dest_files=["res://.godot/imported/TrovicalCalmFreeRegular-0vam4.otf-a704a2d35c4f6ca7b7dba064d9205036.fontdata"]
+source_file="res://Assets/Fonts/TrovicalCalmFreeRegular-0vam4.otf"
+dest_files=["res://.godot/imported/TrovicalCalmFreeRegular-0vam4.otf-ad09366681d36206a487d395314c368e.fontdata"]
 
 [params]
 

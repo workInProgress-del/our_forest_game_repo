@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://cmc8bo61sges4"]
 
-[ext_resource type="FontFile" uid="uid://dsl1ixyn5wbxa" path="res://Assets/TrovicalCalmFreeRegular-0vam4.otf" id="1_470mv"]
+[ext_resource type="FontFile" uid="uid://dsl1ixyn5wbxa" path="res://Assets/Fonts/TrovicalCalmFreeRegular-0vam4.otf" id="1_470mv"]
+[ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="2_65lvl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58jnp"]
 content_margin_left = 4.0
@@ -96,7 +97,8 @@ Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
 Button/constants/outline_size = 0
 Button/font_sizes/font_size = 96
-Button/fonts/font = ExtResource("1_470mv")
+Button/fonts/Scary = ExtResource("1_470mv")
+Button/fonts/font = ExtResource("2_65lvl")
 Button/styles/disabled = SubResource("StyleBoxFlat_58jnp")
 Button/styles/focus = SubResource("StyleBoxFlat_58jnp")
 Button/styles/hover = SubResource("StyleBoxFlat_58jnp")

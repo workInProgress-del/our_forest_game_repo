@@ -11,7 +11,7 @@ extends Node2D
 @onready var book = %TextureRect
 @onready var UI = $UI
 
-var player_in_reach:bool
+var player_in_reach:bool = true
 var is_active:bool = false
 
 func _ready() -> void:
