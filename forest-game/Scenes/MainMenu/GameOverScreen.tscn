@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="1_lgh6d"]
 [ext_resource type="Script" uid="uid://cbq7ts8fu1l3r" path="res://Scripts/game_over_screen.gd" id="1_mr6u7"]
+[ext_resource type="Script" uid="uid://invfn6yqr33u" path="res://Scripts/button_class.gd" id="3_4c8sx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mr6u7"]
 font = ExtResource("1_lgh6d")
@@ -192,6 +193,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_mr6u7")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mr6u7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_mr6u7")
 text = "Restart"
+script = ExtResource("3_4c8sx")
 
 [node name="MainMenu" type="Button" parent="VBoxContainer" unique_id=1366453881]
 layout_mode = 2
@@ -208,6 +210,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_mr6u7")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_mr6u7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_mr6u7")
 text = "Main Menu"
+script = ExtResource("3_4c8sx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=685887487]
 libraries/ = SubResource("AnimationLibrary_2ohig")

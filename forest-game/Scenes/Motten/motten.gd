@@ -71,6 +71,7 @@ func get_target(distance,angle):
 		) * distance
 
 func die():
+	SoundPlayer.play_sound_effect("motte_lost")
 	$PointLight2D.died = true
 
 	

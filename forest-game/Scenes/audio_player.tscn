@@ -8,11 +8,14 @@
 [ext_resource type="AudioStream" uid="uid://bxchgatpt02rj" path="res://Assets/sounds/ambient/randomNoise/gtaSounds-scarySound1.mp3" id="6_jlacw"]
 [ext_resource type="AudioStream" uid="uid://dt1b4125dru2r" path="res://Assets/sounds/ambient/randomNoise/gtaSounds-scarySound2.mp3" id="7_mgoom"]
 
-[node name="AudioPlayer" type="Node" unique_id=622186961]
+[node name="SoundPlayer" type="Node" unique_id=622186961]
 script = ExtResource("1_30owj")
 sounds = Array[AudioStream]([ExtResource("2_os84f"), ExtResource("3_fnrru"), ExtResource("4_lr7pj"), ExtResource("5_dcwqr"), ExtResource("6_jlacw"), ExtResource("7_mgoom")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1965287047]
+volume_db = -5.832
+
+[node name="AudioStreamPlayerBackground" type="AudioStreamPlayer" parent="." unique_id=854650923]
 volume_db = -5.832
 
 [node name="SoundPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1384980210]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dg00jkv17dmm1" path="res://Scenes/MainMenu/main_menu.gd" id="1_3w4mj"]
 [ext_resource type="PackedScene" uid="uid://i7b2y84k3rdx" path="res://Scenes/audio_player.tscn" id="3_0qgbs"]
+[ext_resource type="Script" uid="uid://invfn6yqr33u" path="res://Scripts/button_class.gd" id="3_adu2g"]
 [ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="3_qgdf6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_470mv"]
@@ -169,6 +170,7 @@ unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Play"
+script = ExtResource("3_adu2g")
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=499153153]
 unique_name_in_owner = true
@@ -176,12 +178,14 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Settings
 "
+script = ExtResource("3_adu2g")
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=997468478]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 text = "Quit"
+script = ExtResource("3_adu2g")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1244862845]
 libraries/ = SubResource("AnimationLibrary_0qgbs")
