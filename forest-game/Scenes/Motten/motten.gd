@@ -57,6 +57,7 @@ func choose_new_target():
 			get_target(distance, angle)
 		else:
 			target_position = folowing_objekt.position
+			center = folowing_objekt.position
 	else:
 		while distance < min_target_distance:
 			distance = sqrt(randf()) * radius
@@ -69,14 +70,22 @@ func get_target(distance,angle):
 			sin(angle)
 		) * distance
 
+func die():
+	$PointLight2D.died = true
 
+	
+func now_dead():
+	queue_free()
+	
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if collected: return
 	
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
-		folows_player = true
-		folowing_objekt = body
-		print("eingesammelt")
+		GameManager.add_player_moths(1, false)
 		collected = true
+		folowing_objekt = body
+		var new_parent = get_parent().get_parent().get_node("PlayerMoths")
+		get_parent().remove_child(self)
+		new_parent.add_child(self)
