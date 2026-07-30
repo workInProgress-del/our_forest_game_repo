@@ -8,3 +8,6 @@ class_name Player extends CharacterBody2D
 
 func _ready() -> void:
 	GameManager.add_player_moths(2)
+
+func take_damage(amount: int) -> void:
+	GameManager.delete_player_moths(amount)

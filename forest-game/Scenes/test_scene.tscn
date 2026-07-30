@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="3_50ct6"]
 [ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="4_hb2xm"]
 [ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="5_ak5v8"]
+[ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="6_x033f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_00tjw"]
 
@@ -48,3 +49,8 @@ scale = Vector2(0.73, 0.73)
 max_player_distance = 284
 min_target_distance = 130.0
 radius = 300.0
+
+[node name="Enemies" type="Node" parent="." unique_id=969464936]
+
+[node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("6_x033f")]
+position = Vector2(272, 539)

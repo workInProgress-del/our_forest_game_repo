@@ -5,7 +5,7 @@ extends Node
 func _ready() -> void:
 	GameManager.added_player_moths.connect(on_add_player_moths)
 	GameManager.deleted_player_moths.connect(on_delete_player_moths)
-
+	on_add_player_moths(2)
 
 
 func on_add_player_moths(amount: int):
