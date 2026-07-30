@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://b1dncvvdv7ntp"]
+
+[ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
+[ext_resource type="Texture2D" uid="uid://bni42b25uspj7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" id="2_8ffim"]
+
+[node name="Level1" type="Node2D" unique_id=805981926]
+
+[node name="Background" type="Node" parent="." unique_id=1832912011]
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1430556602]
+
+[node name="ParallaxDemonWoodsBg" type="Sprite2D" parent="Parallax2D2" unique_id=1585242589]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(608, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg2" type="Sprite2D" parent="Parallax2D2" unique_id=2341620]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(2000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg3" type="Sprite2D" parent="Parallax2D2" unique_id=1458512369]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(4000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg4" type="Sprite2D" parent="Parallax2D2" unique_id=841935380]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(3000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg5" type="Sprite2D" parent="Parallax2D2" unique_id=30600919]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(6000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg6" type="Sprite2D" parent="Parallax2D2" unique_id=839196835]
+modulate = Color(5.1740557e-07, 0, 0.33234644, 1)
+position = Vector2(5000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=317877141]
+scroll_offset = Vector2(-482, 0)
+
+[node name="ParallaxDemonWoodsCloseTrees" type="Sprite2D" parent="Parallax2D" unique_id=1859578431]
+self_modulate = Color(0, 0, 0.33333334, 1)
+position = Vector2(-200, 346)
+scale = Vector2(3.17, 3.17)
+texture = ExtResource("2_8ffim")
+
+[node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Parallax2D" unique_id=1728014586]
+self_modulate = Color(0, 0, 0.33333334, 1)
+position = Vector2(900, 346)
+scale = Vector2(3.17, 3.17)
+texture = ExtResource("2_8ffim")
+
+[node name="ParallaxDemonWoodsCloseTrees3" type="Sprite2D" parent="Parallax2D" unique_id=820574980]
+self_modulate = Color(0, 0, 0.33333334, 1)
+position = Vector2(2000, 346)
+scale = Vector2(3.17, 3.17)
+texture = ExtResource("2_8ffim")
