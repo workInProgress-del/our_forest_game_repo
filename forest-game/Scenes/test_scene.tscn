@@ -35,12 +35,16 @@ scale = Vector2(16.333336, 15.527777)
 energy = 2.19
 texture = ExtResource("3_50ct6")
 
-[node name="Motten" parent="." unique_id=1685672916 instance=ExtResource("4_hb2xm")]
+[node name="PlayerMoths" type="Node" parent="." unique_id=113288693]
+unique_name_in_owner = true
+script = ExtResource("5_ak5v8")
+
+[node name="CollectableMoths" type="Node" parent="." unique_id=1637047875]
+unique_name_in_owner = true
+
+[node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("4_hb2xm")]
 position = Vector2(573, 327)
 scale = Vector2(0.73, 0.73)
 max_player_distance = 284
 min_target_distance = 130.0
 radius = 300.0
-
-[node name="PlayerMoths" type="Node" parent="." unique_id=113288693]
-script = ExtResource("5_ak5v8")

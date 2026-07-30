@@ -70,6 +70,8 @@ func get_target(distance,angle):
 			sin(angle)
 		) * distance
 
+func die():
+	queue_free()
 
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
 	if collected: return
@@ -77,7 +79,8 @@ func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
-		folows_player = true
-		folowing_objekt = body
-		print("eingesammelt")
 		collected = true
+		folowing_objekt = body
+		var new_parent = get_parent().get_parent().get_node("PlayerMoths")
+		get_parent().remove_child(self)
+		new_parent.add_child(self)
