@@ -57,6 +57,7 @@ func choose_new_target():
 			get_target(distance, angle)
 		else:
 			target_position = folowing_objekt.position
+			center = folowing_objekt.position
 	else:
 		while distance < min_target_distance:
 			distance = sqrt(randf()) * radius
