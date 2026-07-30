@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var max_speed := 100.0
 @export var acceleration:float = 10
 @export var max_player_distance = 100
-
+@export var min_target_distance: float = 140.0
 # Radius des Bewegungsbereichs
 @export var radius := 150.0
 
@@ -14,6 +14,8 @@ var center: Vector2
 var target_position: Vector2
 var folows_player:bool = false
 var folowing_objekt
+var angle_diff = 0.0
+var collected = false
 
 func _ready():
 	randomize()
@@ -21,10 +23,10 @@ func _ready():
 	choose_new_target()
 
 func _physics_process(delta):
-	rand_move()
+	rand_move(delta)
 
 
-func rand_move():
+func rand_move(delta):
 	#eventuele acceleration
 	var direction = target_position - global_position
 	velocity = max_speed * direction
@@ -32,6 +34,12 @@ func rand_move():
 
 	if direction.length() < target_distance:
 		choose_new_target()
+		
+	var target_angle = global_position.angle_to_point(target_position)
+	var base_turn_speed = 3.0
+	var rotation_speed = base_turn_speed / max(0.5, angle_diff) # Dreht langsamer bei großen Winkeln
+	
+	rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
 
 #	if cur_velocity > speed:
 #		cur_velocity = speed
@@ -40,14 +48,19 @@ func rand_move():
 
 func choose_new_target():
 	var angle = randf_range(0.0, TAU)
-	var distance = sqrt(randf()) * radius
+	var distance = 0.0
+	
 	if folowing_objekt:
 		if global_position.distance_to(folowing_objekt.position) < max_player_distance:
-			get_target(distance,angle)
+			while distance < min_target_distance:
+				distance = sqrt(randf()) * radius
+			get_target(distance, angle)
 		else:
 			target_position = folowing_objekt.position
 	else:
-		get_target(distance,angle)
+		while distance < min_target_distance:
+			distance = sqrt(randf()) * radius
+		get_target(distance, angle)
 
 
 func get_target(distance,angle):
@@ -56,10 +69,14 @@ func get_target(distance,angle):
 			sin(angle)
 		) * distance
 
+
 func _on_einsammel_area_2d_body_entered(body: CharacterBody2D) -> void:
+	if collected: return
+	
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
 		folows_player = true
 		folowing_objekt = body
 		print("eingesammelt")
+		collected = true

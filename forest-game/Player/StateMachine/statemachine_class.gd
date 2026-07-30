@@ -14,7 +14,6 @@ func _ready() -> void:
 	await owner.ready
 	state.enter("")
 
-
 func _unhandled_input(event: InputEvent) -> void:
 	state.handle_input(event)
 
