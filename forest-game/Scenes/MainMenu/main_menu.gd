@@ -10,17 +10,16 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
-
 func _on_play_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/test_scene.tscn")
 
 
 func _on_settings_button_pressed() -> void:
-	pass # Replace with function body.
+	print("nothing there yet.")
 
 
 func _on_quit_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()
