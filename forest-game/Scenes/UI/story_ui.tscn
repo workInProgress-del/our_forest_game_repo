@@ -2,18 +2,12 @@
 
 [ext_resource type="Script" uid="uid://c5ebdcae4o7fj" path="res://Scenes/UI/story_ui.gd" id="1_3pwli"]
 [ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="1_l581s"]
-[ext_resource type="FontFile" uid="uid://da1ea1d5gsmct" path="res://Assets/Fonts/Tophandwrite.otf" id="3_0y2ab"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
 radius = 109.29318
 
-[sub_resource type="LabelSettings" id="LabelSettings_l581s"]
-font = ExtResource("3_0y2ab")
-font_size = 28
-
-[sub_resource type="LabelSettings" id="LabelSettings_3pwli"]
-font = ExtResource("3_0y2ab")
-font_size = 28
+[sub_resource type="LabelSettings" id="LabelSettings_0y2ab"]
+font_size = 40
 
 [sub_resource type="Animation" id="Animation_3pwli"]
 resource_name = "Popup"
@@ -71,9 +65,10 @@ _data = {
 
 [node name="Story_UI" type="Node2D" unique_id=1092067955]
 script = ExtResource("1_3pwli")
-label_right_new_text = "Die Dunkelheit nahm mich auf wie meine Eltern es nie gekonnt hätten. Ich fühlte mich zum ersten mal in meinem Leben geborgen. Als ich mein Zelt aufgebaut habe, so kam plötzlich ein Schwarm sanft leuchtender Motten auf mich zu. Sie vertrieben die tröstende Dunkelheit um mich herum, verscheuchten das Einzige, was ich je an Schutz erfahren habe.  Ich verabscheue sie, ich sollte, denke ich, ein neues Lager aufschlagen, damit ich ungestört bleiben kann. "
-label_left_new_text = "Schon wieder eins von den Viechern. Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes .... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen. Nun, hier bin ich, und was mir sofort aufgefallen war, ist, dass man hier immer das Gefühl hat, es sei Nacht."
+label_right_new_text = "  Schon wieder eins von den Viechern! Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
+label_left_new_text = " Schon wieder eins von den Viechern. Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
 book_texture = ExtResource("1_l581s")
+new_title = " 2.10.1840 Tag 1 meiner Aufzeichnungen im Wald"
 
 [node name="obticleTexture" type="Sprite2D" parent="." unique_id=849316654]
 unique_name_in_owner = true
@@ -89,65 +84,76 @@ shape = SubResource("CircleShape2D_1vivr")
 [node name="UI" type="Control" parent="." unique_id=1752288237]
 visible = false
 custom_minimum_size = Vector2(1152, 648)
+custom_maximum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 0
 offset_top = 648.0
 offset_right = 1152.0
-offset_bottom = 1296.0005
+offset_bottom = 1296.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=2137295314]
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=621495377]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 70.0
+offset_top = 20.0
+offset_right = 1082.0
+offset_bottom = 628.0
+texture = ExtResource("1_l581s")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=669852129]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 70
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 70
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 149
+theme_override_constants/margin_top = 42
+theme_override_constants/margin_right = 149
+theme_override_constants/margin_bottom = 42
 
-[node name="TextureRect" type="TextureRect" parent="UI/MarginContainer" unique_id=621495377]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer" unique_id=1881212415]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=1273250791]
+custom_maximum_size = Vector2(427, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=838625465]
 unique_name_in_owner = true
+custom_maximum_size = Vector2(-1, 427)
 layout_mode = 2
-texture = ExtResource("1_l581s")
+size_flags_vertical = 3
+text = " 2.10.1840 Tag 1 meiner Aufzeichnungen im Wald"
+label_settings = SubResource("LabelSettings_0y2ab")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer" unique_id=1559584068]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=520649207]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 40
-
-[node name="LabelLeft" type="Label" parent="UI/MarginContainer/HBoxContainer/MarginContainer" unique_id=2128712074]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Das Ist ein test text"
-label_settings = SubResource("LabelSettings_l581s")
-
-[node name="MarginContainer2" type="MarginContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=1798820561]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 40
-
-[node name="LabelRight" type="Label" parent="UI/MarginContainer/HBoxContainer/MarginContainer2" unique_id=157831245]
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1731208331]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-text = "Das Ist ein test text"
-label_settings = SubResource("LabelSettings_3pwli")
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.52
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+text = "hkgcxfuaWD"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/MarginContainer/HBoxContainer" unique_id=407567713]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+text = "hkgcxfuaWD"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1434285563]
 libraries/ = SubResource("AnimationLibrary_0ae0d")

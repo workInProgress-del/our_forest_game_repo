@@ -4,12 +4,14 @@ extends Node2D
 @export var label_left_new_text:String = "Test text"
 @export var obsticle_texture:Texture2D
 @export var book_texture:Texture2D
+@export var new_title:String = "test text"
 
-@onready var label_left = %LabelLeft
-@onready var label_right = %LabelRight
+@onready var label_left = %RichTextLabel
+@onready var label_right = %RichTextLabel2
 @onready var obsticle = %obticleTexture
 @onready var book = %TextureRect
 @onready var UI = $UI
+@onready var title = %Label
 
 var player_in_reach:bool = true
 var is_active:bool = false
@@ -19,6 +21,8 @@ func _ready() -> void:
 	label_right.text = label_right_new_text
 	obsticle.texture = obsticle_texture
 	book.texture = book_texture
+	title.text = new_title
+	
 
 func _process(_delta: float) -> void:
 	if player_in_reach:

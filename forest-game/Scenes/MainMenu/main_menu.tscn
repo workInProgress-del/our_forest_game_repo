@@ -35,7 +35,7 @@ offset_top = 18.0
 offset_right = 237.5
 offset_bottom = 420.0
 grow_horizontal = 2
-text = "Forest"
+text = "Tenebra"
 label_settings = SubResource("LabelSettings_470mv")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1863476544]
