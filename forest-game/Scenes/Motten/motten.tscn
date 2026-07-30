@@ -37,12 +37,13 @@ target_distance = 30.0
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
 scale = Vector2(2.88, 2.97)
 color = Color(0.77254903, 0.77254903, 0.78039217, 1)
-energy = 2.2
+energy = 2.02
 texture = ExtResource("2_oeexw")
 script = ExtResource("3_oeexw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267900762]
 position = Vector2(-1.9073486e-06, 3.8146973e-06)
+rotation = 1.5707964
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_oeexw")
 
