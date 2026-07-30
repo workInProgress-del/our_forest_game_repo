@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://m3ru70cpnhd8"]
+
+[ext_resource type="Script" uid="uid://c5ebdcae4o7fj" path="res://Scenes/UI/story_ui.gd" id="1_3pwli"]
+[ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="1_l581s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
+radius = 109.29318
+
+[sub_resource type="LabelSettings" id="LabelSettings_l581s"]
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pwli"]
+font_size = 28
+
+[node name="Story_UI" type="Node2D" unique_id=1092067955]
+script = ExtResource("1_3pwli")
+label_right_new_text = "Test text_1"
+label_left_new_text = "Test text_2"
+
+[node name="obticleTexture" type="Sprite2D" parent="." unique_id=849316654]
+unique_name_in_owner = true
+texture = ExtResource("1_l581s")
+
+[node name="DetectingArea2D" type="Area2D" parent="." unique_id=565226757]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectingArea2D" unique_id=557268233]
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="UI" type="Control" parent="." unique_id=1752288237]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=2137295314]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 70
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 70
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="UI/MarginContainer" unique_id=621495377]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("1_l581s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer" unique_id=1559584068]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=520649207]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 40
+
+[node name="LabelLeft" type="Label" parent="UI/MarginContainer/HBoxContainer/MarginContainer" unique_id=2128712074]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Das Ist ein test text"
+label_settings = SubResource("LabelSettings_l581s")
+
+[node name="MarginContainer2" type="MarginContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=1798820561]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 40
+
+[node name="LabelRight" type="Label" parent="UI/MarginContainer/HBoxContainer/MarginContainer2" unique_id=157831245]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Das Ist ein test text"
+label_settings = SubResource("LabelSettings_3pwli")
