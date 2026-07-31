@@ -72,7 +72,7 @@ func play_random_sound():
 	while true:
 		await get_tree().create_timer(rng.randf_range(1.0, 2.0)).timeout
 		player.stream = sounds[rng.randi_range(0, sounds.size() - 1)]
-		player.volume_db = rng.randf_range(-20,-10)
+		player.volume_db = rng.randf_range(-12,-5)
 		player.play()
 		await player.finished
 
@@ -80,7 +80,7 @@ func play_random_sound_background():
 	while true:
 		await get_tree().create_timer(rng.randf_range(1.0, 2.0)).timeout
 		player_background.stream = sounds[rng.randi_range(0, sounds.size() - 1)]
-		player_background.volume_db = rng.randf_range(-30,-15)
+		player_background.volume_db = rng.randf_range(-20,-9)
 		player_background.play()
 		await player_background.finished
 

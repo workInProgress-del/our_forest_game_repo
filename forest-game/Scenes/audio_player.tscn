@@ -49,4 +49,4 @@ stream = SubResource("AudioStreamWAV_lr7pj")
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="." unique_id=1554061768]
 stream = SubResource("AudioStreamWAV_fnrru")
-volume_db = -5.492
+volume_db = 2.318

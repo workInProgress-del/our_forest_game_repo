@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://0m0e74twwcw4"]
+
+[ext_resource type="Texture2D" uid="uid://b1bnwqayeh3lf" path="res://Assets/Level1/pilz.png" id="1_uffqd"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=895807914]
+position = Vector2(230, 46)
+texture = ExtResource("1_uffqd")
