@@ -22,6 +22,9 @@ func delete_player_moths(amount: int):
 	if player_moths <= 0:
 		end_game()
 
+func emit_victory():
+	get_tree().change_scene_to_file("res://Scenes/cutsceneending.tscn")
+
 func end_game():
 	game_ended.emit()
 	
