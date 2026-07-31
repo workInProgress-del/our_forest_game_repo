@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://b0s74h88574fo" path="res://Scripts/level_1.gd" id="1_hwvp3"]
 [ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="2_u5ghp"]
-[ext_resource type="Texture2D" uid="uid://k1kdxj4mvqoe" path="res://Scenes/Levels/zelt (1).png" id="3_k2mw1"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_3628d"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_irw6p"]
 [ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_31phq"]
@@ -7323,9 +7322,43 @@ energy = 1.84
 blend_mode = 2
 
 [node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("12_ad63i")]
-position = Vector2(1341, 692)
-scale = Vector2(7.1, 7.1)
-obsticle_texture = ExtResource("3_k2mw1")
+position = Vector2(1370, 851)
+scale = Vector2(3.03, 3.03)
+
+[node name="Story_UI" parent="Story_UI" unique_id=1972848907 instance=ExtResource("12_ad63i")]
+position = Vector2(6174.2573, 53.13532)
+scale = Vector2(1.185, 1.185)
+label_right_new_text = "Und ich hoffe, man kann sie auch erlernen, zu kontrollieren, denn damit ich glücklich leben kann, brauche ich die Dunkelheit. Dafür aber müsste ich die Motten loswerden. Und der beste Weg ist, sie zu vernichten. Ich will den Ursprungsort dieser Tiere finden, und dem Grund auflauern, weshalb sie sich um mich scharen. Ich könnte mir vorstellen, dass es einen Zusammenhang zwischen den Motten und dem Licht gibt. Somit wäre der Ort, wo die Viecher herkommen, eine Lichtquelle. Und die sollte ich so bald wie möglich zerstören."
+label_left_new_text = "Heute habe ich mein neues Lager im Wald aufgeschlagen. Was meine Hoffnung, die Motten loszuwerden, anbelangt, so wurde ich enttäuscht. Sie folgen mir auf Schritt und Tritt. Langsam erscheint mir das ganze merkwürdig. Dass meine Gefühle zu Licht und Dunkelheit so verschieden sind kann kein Zufall sein. Ich habe das Gefühl, Teil einer höheren Macht zu sein. "
+new_title = "Tag 2 im Wald"
+
+[node name="Story_UI" parent="Story_UI/Story_UI" unique_id=1727871829 instance=ExtResource("12_ad63i")]
+position = Vector2(6189.8604, 123.65794)
+scale = Vector2(1.185, 1.185)
+label_right_new_text = "Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten. Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
+label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch."
+new_title = "Tag 3 im Wald"
+
+[node name="Story_UI2" parent="Story_UI" unique_id=2078135075 instance=ExtResource("12_ad63i")]
+position = Vector2(15578.878, 1333.0035)
+scale = Vector2(1.185, 1.185)
+label_right_new_text = "Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
+label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch. Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten."
+new_title = "Tag 3 im Wald"
+
+[node name="Story_UI3" parent="Story_UI" unique_id=415626005 instance=ExtResource("12_ad63i")]
+position = Vector2(19230.033, 106.600586)
+scale = Vector2(1.185, 1.185)
+label_right_new_text = "Ich schaute nach, und sah eine Familie samt kleinem Mädchen. Es sah so aus, als könnte ihnen die Dunkelheit rein gar nichts anhaben. Die reine Liebe, die sich wie eine schützende Blase um sie legte strahlte eine so wohlwollende Wärme aus, dass sie die kalte, drohende Dunkelheit nicht einmal bemerkten.  Ich beobachtete die Familie eine Weile, und ich gestehe, ich weiß nicht mal warum. Nur leider weiß ich, dass mir sowas nie mehr passieren könnte. Warum in aller Welt bräuchte ich das denn? Aber schön wäre es trotzdem."
+label_left_new_text = "Heute habe ich endlich meinen Tempel fertiggestellt. Endlich kann ich die Macht der Dunkelheit erspüren, die Furcht meiner unterworfenen Schatten steigt. Ich fühle, wie ich durch meinen Bau die Energie regelrecht aufsauge. Ich habe mich noch nie so lebendig gefühlt. Sobald ich kräftig genug bin, werde ich in die Welt hinaus gehen, und allen zeigen, welche Fähigkeiten ich besitze! Und doch macht mich etwas, was ich vor kurzem erlebt habe, sehr nachdenklich. Ein leises Kichern drang plötzlich zwischen den Bäumen hervor."
+new_title = "Tag 4 im Wald"
+
+[node name="Story_UI4" parent="Story_UI" unique_id=1313024372 instance=ExtResource("12_ad63i")]
+position = Vector2(22114.852, 1353.7955)
+scale = Vector2(1.185, 1.185)
+label_right_new_text = ""
+label_left_new_text = "Der Tag ist gekommen. Es hat ein Ende. Endlich, endlich, endlich! Jeder soll sehen, wie ich gelitten habe, und das gleiche Leid spüren, welches ich erlebt habe. Alle Liebe werde ich aus dieser verhassten Welt schaffen, noch so jedes kleine Glücksgefühl sollte bestraft werden. Hoffentlich wird diese blöde Energie lange halten. Sonst müsste ich schon wieder in dieses verdammte Loch."
+new_title = "Tag 5 im Wald"
 
 [node name="Background" type="Node" parent="." unique_id=1832912011]
 
@@ -7356,7 +7389,7 @@ scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg4" type="Sprite2D" parent="Background/Parallax2D2" unique_id=841935380]
-position = Vector2(16593.957, 306.4151)
+position = Vector2(16593.96, 285.28302)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
