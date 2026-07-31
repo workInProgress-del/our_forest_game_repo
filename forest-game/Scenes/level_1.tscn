@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://gxk6aso70ru4"]
 
 [ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
-[ext_resource type="Texture2D" uid="uid://bni42b25uspj7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-close-trees.png" id="2_8ffim"]
-[ext_resource type="Texture2D" uid="uid://dkwgr82sejmqi" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-far-trees.png" id="3_xfk5q"]
-[ext_resource type="Texture2D" uid="uid://cdyto5v6pgje7" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-mid-trees.png" id="4_7p6j4"]
+[ext_resource type="Shader" uid="uid://bfmxev1a0n2h0" path="res://Scripts/level_1.gdshader" id="2_chwpn"]
+[ext_resource type="Texture2D" uid="uid://borprsomextv4" path="res://Assets/hintergrund/hintergrund.png" id="2_wrinw"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_6444e"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_lsmp6"]
 [ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_xrdnt"]
@@ -12,11 +11,39 @@
 [ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_6r07y"]
 [ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_6ioyp"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrinw"]
+render_priority = 0
+shader = ExtResource("2_chwpn")
+shader_parameter/light = Color(0, 0, 0, 1)
+shader_parameter/light_power = 0.0
+shader_parameter/light_str = 0.0
+shader_parameter/fresnel_str = 0.0
+shader_parameter/rim_pow = 0.0
+shader_parameter/rim_color = Color(0, 0, 0, 1)
+shader_parameter/rim_color_str = 0.0
+shader_parameter/rim_ems_str = 0.0
+shader_parameter/rim_ems_pow = 0.0
+shader_parameter/rim_ems_str2 = 0.0
+shader_parameter/rim_ems_pow2 = 0.0
+shader_parameter/rim_color2 = Color(0, 0, 0, 1)
+shader_parameter/rim_color_str2 = 0.0
+shader_parameter/mix_rou = 0.0
+shader_parameter/max_rou = 0.0
+shader_parameter/city_dark = 0.0
+shader_parameter/city_light = 0.0
+shader_parameter/Cloud = 0.0
+shader_parameter/Cloud_speed = 0.0
+shader_parameter/Cloud_color = Color(0, 0, 0, 1)
+shader_parameter/CloudNormal_scale = 0.0
+shader_parameter/plane_Normal_Scale = 0.0
+shader_parameter/ems_str = 0.0
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 
 [node name="Level1" type="Node2D" unique_id=805981926]
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
+visible = false
 position = Vector2(538, 354.00003)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
@@ -26,6 +53,7 @@ blend_mode = 2
 [node name="Background" type="Node" parent="." unique_id=1832912011]
 
 [node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=1430556602]
+visible = false
 z_index = -29
 scale = Vector2(1.325, 1.325)
 scroll_scale = Vector2(0.805, 0.805)
@@ -76,182 +104,41 @@ position = Vector2(5000, 348)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("1_vk57k")
 
-[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=317877141]
-z_index = -29
-scale = Vector2(1.325, 1.325)
-scroll_scale = Vector2(0.805, 0.805)
-scroll_offset = Vector2(-489, -125)
+[node name="ParallaxLayer" type="Parallax2D" parent="Background" unique_id=1522976270]
+material = SubResource("ShaderMaterial_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees" type="Sprite2D" parent="Background/Parallax2D" unique_id=1859578431]
-position = Vector2(-200, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1506299203]
+position = Vector2(0, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D" unique_id=1728014586]
-position = Vector2(900, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+[node name="Sprite2D2" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1403119757]
+position = Vector2(1771, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees3" type="Sprite2D" parent="Background/Parallax2D" unique_id=820574980]
-position = Vector2(2000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+[node name="Sprite2D3" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1419361566]
+position = Vector2(3538, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees4" type="Sprite2D" parent="Background/Parallax2D" unique_id=1761132947]
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+[node name="Sprite2D4" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1229288239]
+position = Vector2(3538, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees5" type="Sprite2D" parent="Background/Parallax2D" unique_id=231982809]
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
+[node name="Sprite2D5" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1299792321]
+position = Vector2(5301, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
-[node name="ParallaxDemonWoodsCloseTrees6" type="Sprite2D" parent="Background/Parallax2D" unique_id=995420040]
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees7" type="Sprite2D" parent="Background/Parallax2D" unique_id=537927994]
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees8" type="Sprite2D" parent="Background/Parallax2D" unique_id=1304435690]
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees9" type="Sprite2D" parent="Background/Parallax2D" unique_id=798798529]
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees10" type="Sprite2D" parent="Background/Parallax2D" unique_id=1059608047]
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D" unique_id=117671088]
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D" unique_id=30360968]
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("2_8ffim")
-
-[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=1552170250]
-z_index = -29
-scale = Vector2(1.325, 1.325)
-scroll_scale = Vector2(0.91, 0.91)
-scroll_offset = Vector2(-489, -125)
-
-[node name="ParallaxDemonWoodsCloseTrees" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1622357902]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(-200, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D3" unique_id=644390780]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(900, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees3" type="Sprite2D" parent="Background/Parallax2D3" unique_id=94948705]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(2000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees4" type="Sprite2D" parent="Background/Parallax2D3" unique_id=457004741]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees5" type="Sprite2D" parent="Background/Parallax2D3" unique_id=569001422]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees6" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1844377703]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(3000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees7" type="Sprite2D" parent="Background/Parallax2D3" unique_id=2119906624]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees8" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1953991563]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees9" type="Sprite2D" parent="Background/Parallax2D3" unique_id=854065541]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(6000, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees10" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1224255094]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1992321535]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D3" unique_id=847175268]
-self_modulate = Color(0.3387388, 0.5428337, 0.99998945, 1)
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("3_xfk5q")
-
-[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=212642542]
-visible = false
-z_index = -4
-scale = Vector2(1.325, 1.325)
-scroll_scale = Vector2(1.16, 1.16)
-scroll_offset = Vector2(-482, -296)
-
-[node name="ParallaxDemonWoodsCloseTrees" type="Sprite2D" parent="Background/Parallax2D4" unique_id=450412028]
-self_modulate = Color(0, 0, 0.33333334, 0.57254905)
-position = Vector2(-200, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
-
-[node name="ParallaxDemonWoodsCloseTrees2" type="Sprite2D" parent="Background/Parallax2D4" unique_id=236779149]
-self_modulate = Color(0, 0, 0.33333334, 0.57254905)
-position = Vector2(900, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
-
-[node name="ParallaxDemonWoodsCloseTrees11" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1305312312]
-self_modulate = Color(0, 0, 0.33333334, 0.57254905)
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
-
-[node name="ParallaxDemonWoodsCloseTrees12" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1601612732]
-self_modulate = Color(0, 0, 0.33333334, 0.57254905)
-position = Vector2(4500, 346)
-scale = Vector2(3.17, 3.17)
-texture = ExtResource("4_7p6j4")
+[node name="Sprite2D6" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=708420]
+position = Vector2(7072.0005, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_wrinw")
 
 [node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_6444e")]
+z_index = 6
 position = Vector2(1.0000305, 5.000122)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=994735179]
@@ -265,9 +152,9 @@ script = ExtResource("7_xrdnt")
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1561387044]
 offset = Vector2(0, -100)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1819682017]
+[node name="WorldBorder" type="StaticBody2D" parent="." unique_id=1819682017]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1105697142]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder" unique_id=1105697142]
 position = Vector2(0, 631)
 shape = SubResource("WorldBoundaryShape2D_1vivr")
 
