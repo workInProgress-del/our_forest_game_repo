@@ -219,10 +219,6 @@ tracks/15/keys = {
 
 [sub_resource type="Animation" id="Animation_00tjw"]
 resource_name = "fall"
-
-[sub_resource type="Animation" id="Animation_fhl08"]
-resource_name = "idle"
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -230,10 +226,10 @@ tracks/0/path = NodePath("texturen/ArmLinksPerson:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-29.03226, -77.41936), Vector2(-29.895388, -63.939644)]
+"values": [Vector2(-48.387085, -70.96773)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -242,10 +238,10 @@ tracks/1/path = NodePath("texturen/ArmLinksPerson:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4666667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.23359896, -0.23359896]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -254,7 +250,204 @@ tracks/2/path = NodePath("texturen/ArmRechtsPerson:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32.258057, -74.19356)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("texturen/ArmRechtsPerson:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.12437863]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("texturen/FußLinksPerson:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-41.935577, 167.7419)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("texturen/FußLinksPerson:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("texturen/FußRechtsPerson:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(38.709503, 164.51608)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("texturen/FußRechtsPerson:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.02505573]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("texturen/HoseLinksPerson:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29.032349, 19.354782)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("texturen/HoseLinksPerson:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texturen/HoseRechtsPerson:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(9.677307, 25.806396)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texturen/HoseRechtsPerson:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.02505573]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texturen/KopfPerson:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-9.677429, -90.322586)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texturen/KopfPerson:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texturen/OberkörperPerson:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -22.580643)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texturen/OberkörperPerson:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_fhl08"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texturen/ArmLinksPerson:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9916667, 0.995),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.03226, -77.41936), Vector2(-29.895388, -63.939644), Vector2(-29.889984, -64.02388)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texturen/ArmLinksPerson:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.995),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.23359896, -0.16931996]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texturen/ArmRechtsPerson:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(45.161255, -87.09679), Vector2(44.298126, -73.61707)]
@@ -266,10 +459,10 @@ tracks/3/path = NodePath("texturen/ArmRechtsPerson:rotation")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 0.995),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.080583066, 0.080583066]
+"values": [0.080583066, -0.006908402]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -278,7 +471,7 @@ tracks/4/path = NodePath("texturen/FußLinksPerson:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-35.48387, 196.77419), Vector2(-35.483856, 196.77419)]
@@ -290,7 +483,7 @@ tracks/5/path = NodePath("texturen/FußLinksPerson:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.020409286, -0.020409286]
@@ -302,7 +495,7 @@ tracks/6/path = NodePath("texturen/FußRechtsPerson:position")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(58.064484, 190.32259), Vector2(58.064484, 190.32259)]
@@ -314,7 +507,7 @@ tracks/7/path = NodePath("texturen/FußRechtsPerson:rotation")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.03468716, 0.03468716]
@@ -326,7 +519,7 @@ tracks/8/path = NodePath("texturen/HoseLinksPerson:position")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-25.806454, 45.161285), Vector2(-25.806458, 45.161285)]
@@ -338,7 +531,7 @@ tracks/9/path = NodePath("texturen/HoseLinksPerson:rotation")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.020409286, -0.020409286]
@@ -350,7 +543,7 @@ tracks/10/path = NodePath("texturen/HoseRechtsPerson:position")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(32.258026, 48.387085), Vector2(32.258026, 48.387085)]
@@ -362,7 +555,7 @@ tracks/11/path = NodePath("texturen/HoseRechtsPerson:rotation")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.03468716, 0.03468716]
@@ -374,10 +567,10 @@ tracks/12/path = NodePath("texturen/KopfPerson:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 0.985),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(3.225769, -96.774216), Vector2(2.3626385, -83.2945)]
+"values": [Vector2(3.225769, -96.774216), Vector2(3.2258065, -80.64516)]
 }
 tracks/13/type = "value"
 tracks/13/imported = false
@@ -386,10 +579,10 @@ tracks/13/path = NodePath("texturen/KopfPerson:rotation")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.985, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, 0.0]
+"values": [0.0, 0.0, 0.0]
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -398,7 +591,7 @@ tracks/14/path = NodePath("texturen/OberkörperPerson:position")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(12.903225, -29.032265), Vector2(12.040098, -15.552558)]
@@ -410,7 +603,7 @@ tracks/15/path = NodePath("texturen/OberkörperPerson:rotation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.47500002),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 0.0]
@@ -418,15 +611,787 @@ tracks/15/keys = {
 
 [sub_resource type="Animation" id="Animation_vtle1"]
 resource_name = "jump"
+length = 0.71
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texturen/ArmLinksPerson:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.48387, -54.838707), Vector2(-35.48387, -54.838707), Vector2(-35.483875, -87.09678), Vector2(-35.483875, -87.09678), Vector2(-35.483887, -87.09679)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texturen/ArmLinksPerson:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.053687006, -0.053687006, -0.2863274, -0.2863274, -0.2863274]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texturen/ArmRechtsPerson:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(45.161297, -58.064514), Vector2(45.161297, -58.064514), Vector2(41.93549, -83.87096), Vector2(41.93549, -83.87096), Vector2(41.935486, -83.87096)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("texturen/ArmRechtsPerson:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.13864852, -0.13864852, 0.04555338, 0.04555338, 0.04555338]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("texturen/FußLinksPerson:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.483856, 196.77419), Vector2(-35.483856, 196.77419), Vector2(-35.483856, 196.77419), Vector2(-35.483856, 196.77419), Vector2(-32.258068, 174.19357)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("texturen/FußLinksPerson:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.020409286, -0.020409286, 0.10923104, 0.10923104, 0.06717789]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("texturen/FußRechtsPerson:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(48.387096, 193.54839), Vector2(48.387096, 193.54839), Vector2(48.387085, 193.54839), Vector2(48.387085, 193.54839), Vector2(45.16129, 170.96774)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("texturen/FußRechtsPerson:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.03468716, 0.03468716, 0.20316409, 0.20316409, 0.12902492]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("texturen/HoseLinksPerson:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.032257, 51.6129), Vector2(-29.032257, 51.6129), Vector2(-25.80645, 32.258064), Vector2(-25.80645, 32.258064), Vector2(-25.806452, 22.580647)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("texturen/HoseLinksPerson:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.020409286, -0.020409286, -0.020409286, -0.020409286, -0.020409286]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texturen/HoseRechtsPerson:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(29.032253, 54.838715), Vector2(29.032253, 54.838715), Vector2(25.80645, 45.16129), Vector2(25.80645, 45.16129), Vector2(25.806452, 35.483864)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texturen/HoseRechtsPerson:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.03468716, 0.03468716, 0.03468716, 0.03468716, 0.03468716]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texturen/KopfPerson:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(6.4516106, -67.741974), Vector2(6.4516106, -67.741974), Vector2(3.2258053, -99.99997), Vector2(3.2258053, -99.99997), Vector2(3.2257996, -99.999954)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texturen/KopfPerson:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texturen/OberkörperPerson:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(12.903226, -3.2258053), Vector2(12.903226, -3.2258053), Vector2(9.67742, -35.48387), Vector2(9.67742, -35.48387), Vector2(9.677429, -35.48387)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texturen/OberkörperPerson:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.13999999, 0.25, 0.56666666, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0]
+}
 
 [sub_resource type="Animation" id="Animation_8viyr"]
 resource_name = "land"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texturen/FußLinksPerson:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.483887, 193.54843), Vector2(-35.483887, 193.54843), Vector2(-35.483887, 193.54843)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texturen/FußLinksPerson:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.06717789, 0.06717789, 0.06717789]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texturen/FußRechtsPerson:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(41.93547, 190.3226), Vector2(41.93547, 190.3226), Vector2(41.935455, 190.3226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("texturen/FußRechtsPerson:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.12902492, 0.12902492, 0.12902492]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("texturen/HoseLinksPerson:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-29.032257, 41.935486), Vector2(-29.032257, 41.935486), Vector2(-29.032257, 41.935455)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("texturen/HoseLinksPerson:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.020409286, -0.020409286, -0.020409286]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("texturen/HoseRechtsPerson:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(22.580643, 54.838745), Vector2(22.580643, 54.838745), Vector2(19.35485, 51.612915)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("texturen/HoseRechtsPerson:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.03468716, 0.03468716, 0.03468716]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("texturen/KopfPerson:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -64.51616), Vector2(0, -64.51616), Vector2(-3.2258072, -77.41937)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("texturen/KopfPerson:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texturen/OberkörperPerson:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(6.4516144, -3.2258053), Vector2(6.4516144, -3.2258053), Vector2(6.4516296, -12.903221)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texturen/OberkörperPerson:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texturen/ArmLinksPerson:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-38.70968, -58.06452), Vector2(-38.70968, -58.06452), Vector2(-38.70968, -64.516136)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texturen/ArmLinksPerson:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.101607054, -0.101607054, -0.32051575]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texturen/ArmRechtsPerson:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(38.709675, -58.064518), Vector2(38.709675, -58.064518), Vector2(38.709686, -67.74194)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texturen/ArmRechtsPerson:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.035516486, -0.035516486, 0.091158584]
+}
 
 [sub_resource type="Animation" id="Animation_sm0op"]
 resource_name = "prime_jump"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texturen/FußLinksPerson:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-35.483887, 193.54843), Vector2(-35.483887, 193.54843)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texturen/FußLinksPerson:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.06717789, 0.06717789]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texturen/FußRechtsPerson:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(41.935455, 190.3226), Vector2(41.935455, 190.3226)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("texturen/FußRechtsPerson:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.12902492, 0.12902492]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("texturen/HoseLinksPerson:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-29.032257, 41.935455), Vector2(-29.032257, 41.935455)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("texturen/HoseLinksPerson:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.020409286, -0.020409286]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("texturen/HoseRechtsPerson:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(19.354858, 51.612915), Vector2(19.354858, 51.612915)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("texturen/HoseRechtsPerson:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.03468716, 0.03468716]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("texturen/OberkörperPerson:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6.4516296, -12.9032135), Vector2(6.4516296, 1.1444092e-05)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("texturen/OberkörperPerson:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texturen/KopfPerson:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3.2257996, -77.41939), Vector2(1.9073486e-06, -61.29036)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texturen/KopfPerson:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texturen/ArmLinksPerson:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-38.709686, -64.51613), Vector2(-38.70968, -54.83871)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texturen/ArmLinksPerson:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.32051575, -0.14927772]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texturen/ArmRechtsPerson:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(38.709686, -67.74196), Vector2(35.483856, -58.0645)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texturen/ArmRechtsPerson:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.091158584, -0.14256452]
+}
 
 [sub_resource type="Animation" id="Animation_od3ui"]
 resource_name = "run"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texturen/FußLinksPerson:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-67.01776, 167.87361), Vector2(-32.258057, 174.19357), Vector2(12.903225, 167.74194), Vector2(-32.258057, 174.19357)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texturen/FußLinksPerson:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.28704897, 0.06717789, -0.16905852, 0.06717789]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texturen/FußRechtsPerson:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(70.44107, 170.96774), Vector2(45.161285, 170.96774), Vector2(-1.1444092e-05, 174.19354), Vector2(45.161285, 170.96774)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("texturen/FußRechtsPerson:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.100730285, 0.12902492, 0.38120562, 0.12902492]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("texturen/HoseLinksPerson:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25.806458, 22.580643), Vector2(-25.806458, 22.580643), Vector2(-25.806458, 19.354836), Vector2(-25.806458, 22.580643)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("texturen/HoseLinksPerson:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.18888794, -0.020409286, -0.3274488, -0.020409286]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("texturen/HoseRechtsPerson:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(25.806458, 35.48387), Vector2(25.806458, 35.48387), Vector2(25.806458, 35.48387), Vector2(25.806458, 35.48387)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("texturen/HoseRechtsPerson:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.13648252, 0.03468716, 0.36607322, 0.03468716]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("texturen/OberkörperPerson:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(9.677429, -35.48387), Vector2(9.677429, -32.258057), Vector2(9.677429, -35.48387), Vector2(9.677429, -32.258057)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("texturen/OberkörperPerson:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("texturen/KopfPerson:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3.2257996, -99.999954), Vector2(3.2257996, -93.54831), Vector2(3.2257996, -99.999954), Vector2(3.2257996, -93.54831)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("texturen/KopfPerson:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("texturen/ArmLinksPerson:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-35.483887, -87.09679), Vector2(-35.483887, -83.87097), Vector2(-35.483887, -87.09679), Vector2(-35.483887, -83.87097)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("texturen/ArmLinksPerson:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.545511, -0.37091005, -0.25703806, -0.37091005]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("texturen/ArmRechtsPerson:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(41.935482, -83.87095), Vector2(41.935486, -80.64514), Vector2(41.935486, -83.87096), Vector2(41.935486, -80.64514)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("texturen/ArmRechtsPerson:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.23007326, 0.10629169, -0.06367551, 0.10629169]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_od3ui"]
 _data = {
@@ -579,12 +1544,13 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sm0op")
 }],
-"loop": 0,
+"loop": 2,
 "name": &"prime_jump",
 "speed": 20.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1175084695 groups=["Player"]]
+position = Vector2(1.0000001, -0.99999994)
 scale = Vector2(0.31, 0.31)
 script = ExtResource("1_btcbx")
 
@@ -619,28 +1585,11 @@ script = ExtResource("4_gwnis")
 unique_name_in_owner = true
 position = Vector2(1109.6774, -229.03227)
 sprite_frames = SubResource("SpriteFrames_1vivr")
-animation = &"idle"
-frame_progress = 0.27660853
+animation = &"move"
+frame_progress = 0.9730911
 
 [node name="texturen" type="Node2D" parent="." unique_id=1223864244]
-
-[node name="ArmLinksPerson" type="Sprite2D" parent="texturen" unique_id=889240293]
-position = Vector2(310.00003, 203.54839)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_pisgm")
-offset = Vector2(350.28677, 286.35965)
-
-[node name="ArmRechtsPerson" type="Sprite2D" parent="texturen" unique_id=550592364]
-position = Vector2(310.00003, 203.54839)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("11_b1ygp")
-offset = Vector2(264.8388, 290.6452)
-
-[node name="FußLinksPerson" type="Sprite2D" parent="texturen" unique_id=1032192368]
-position = Vector2(310.00003, 203.54839)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("12_o28un")
-offset = Vector2(355.16138, 39.032257)
+position = Vector2(12.903225, -6.4516134)
 
 [node name="FußRechtsPerson" type="Sprite2D" parent="texturen" unique_id=1363301743]
 position = Vector2(310.00003, 203.54839)
@@ -648,26 +1597,44 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("13_n471f")
 offset = Vector2(268.0646, 42.25807)
 
-[node name="HoseLinksPerson" type="Sprite2D" parent="texturen" unique_id=1786654624]
-position = Vector2(310.00003, 203.54839)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("14_7emwf")
-offset = Vector2(342.25815, 177.74196)
-
 [node name="HoseRechtsPerson" type="Sprite2D" parent="texturen" unique_id=185870819]
 position = Vector2(310.00003, 203.54839)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("15_hshwv")
 offset = Vector2(293.87106, 171.29034)
 
-[node name="KopfPerson" type="Sprite2D" parent="texturen" unique_id=1354489494]
+[node name="FußLinksPerson" type="Sprite2D" parent="texturen" unique_id=1032192368]
 position = Vector2(310.00003, 203.54839)
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("16_gpjlu")
-offset = Vector2(316.4517, 313.22586)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("12_o28un")
+offset = Vector2(355.16138, 39.032257)
+
+[node name="HoseLinksPerson" type="Sprite2D" parent="texturen" unique_id=1786654624]
+position = Vector2(310.00003, 203.54839)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("14_7emwf")
+offset = Vector2(342.25815, 177.74196)
+
+[node name="ArmRechtsPerson" type="Sprite2D" parent="texturen" unique_id=550592364]
+position = Vector2(310.00003, 203.54839)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_b1ygp")
+offset = Vector2(264.8388, 290.6452)
 
 [node name="OberkörperPerson" type="Sprite2D" parent="texturen" unique_id=2123754677]
 position = Vector2(310.00003, 203.54839)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("17_8mwp6")
 offset = Vector2(306.7743, 245.4839)
+
+[node name="KopfPerson" type="Sprite2D" parent="texturen" unique_id=1354489494]
+position = Vector2(310.00003, 203.54839)
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("16_gpjlu")
+offset = Vector2(316.4517, 313.22586)
+
+[node name="ArmLinksPerson" type="Sprite2D" parent="texturen" unique_id=889240293]
+position = Vector2(310.00003, 203.54839)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("10_pisgm")
+offset = Vector2(350.28677, 286.35965)
