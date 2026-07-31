@@ -90,3 +90,4 @@ func _on_einsammel_area_2d_body_entered(body: Node2D) -> void:
 		var new_parent = get_parent().get_parent().get_node("PlayerMoths")
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
+		SoundPlayer.play_sound_effect("motte_collected")

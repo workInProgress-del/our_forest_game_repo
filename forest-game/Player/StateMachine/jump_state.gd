@@ -21,4 +21,5 @@ func physics_update(delta: float) -> void:
 func _on_prime_jump_finished():
 	player.velocity.y = -player.jump_impulse
 	jump_started = true
+	SoundPlayer.play_sound_effect("jump_sound")
 	player.animation_player.animation_finished.disconnect(_on_prime_jump_finished)
