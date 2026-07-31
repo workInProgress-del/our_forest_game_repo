@@ -13,10 +13,11 @@ extends Node2D
 @onready var UI = %UI
 @onready var title = %Label
 
-var player_in_reach:bool = true
+var player_in_reach:bool
 var is_active:bool = false
 
 func _ready() -> void:
+	UI.hide()
 	label_left.text = label_left_new_text
 	label_right.text = label_right_new_text
 	obsticle.texture = obsticle_texture
