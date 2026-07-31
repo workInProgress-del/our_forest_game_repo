@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://btoeua5t4kkqy" path="res://Scenes/Levels/Tenebra Level Design.drawio.png" id="13_7r2dd"]
 [ext_resource type="Texture2D" uid="uid://bv6lanqj7yck3" path="res://Scenes/Levels/plattform 22222.png" id="13_k2mw1"]
 [ext_resource type="Script" uid="uid://dr44bhso5yqgr" path="res://Scripts/victory_area.gd" id="14_k2mw1"]
+[ext_resource type="Script" uid="uid://hp00lccfat16" path="res://Scenes/Levels/area_2d_2.gd" id="15_tjl6l"]
+[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="16_3628d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 
@@ -7307,58 +7309,18 @@ sources/0 = SubResource("TileSetAtlasSource_afv7b")
 sources/1 = SubResource("TileSetAtlasSource_7r2dd")
 sources/2 = SubResource("TileSetAtlasSource_tjl6l")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
-radius = 3962.128
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27a24"]
+size = Vector2(1393, 16606)
 
 [node name="Level1" type="Node2D" unique_id=805981926]
 script = ExtResource("1_hwvp3")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
-visible = false
 position = Vector2(538, 354.00003)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
 energy = 1.84
 blend_mode = 2
-
-[node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("12_ad63i")]
-position = Vector2(1370, 851)
-scale = Vector2(3.03, 3.03)
-
-[node name="Story_UI" parent="Story_UI" unique_id=1972848907 instance=ExtResource("12_ad63i")]
-position = Vector2(6174.2573, 53.13532)
-scale = Vector2(1.185, 1.185)
-label_right_new_text = "Und ich hoffe, man kann sie auch erlernen, zu kontrollieren, denn damit ich glücklich leben kann, brauche ich die Dunkelheit. Dafür aber müsste ich die Motten loswerden. Und der beste Weg ist, sie zu vernichten. Ich will den Ursprungsort dieser Tiere finden, und dem Grund auflauern, weshalb sie sich um mich scharen. Ich könnte mir vorstellen, dass es einen Zusammenhang zwischen den Motten und dem Licht gibt. Somit wäre der Ort, wo die Viecher herkommen, eine Lichtquelle. Und die sollte ich so bald wie möglich zerstören."
-label_left_new_text = "Heute habe ich mein neues Lager im Wald aufgeschlagen. Was meine Hoffnung, die Motten loszuwerden, anbelangt, so wurde ich enttäuscht. Sie folgen mir auf Schritt und Tritt. Langsam erscheint mir das ganze merkwürdig. Dass meine Gefühle zu Licht und Dunkelheit so verschieden sind kann kein Zufall sein. Ich habe das Gefühl, Teil einer höheren Macht zu sein. "
-new_title = "Tag 2 im Wald"
-
-[node name="Story_UI" parent="Story_UI/Story_UI" unique_id=1727871829 instance=ExtResource("12_ad63i")]
-position = Vector2(6189.8604, 123.65794)
-scale = Vector2(1.185, 1.185)
-label_right_new_text = "Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten. Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
-label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch."
-new_title = "Tag 3 im Wald"
-
-[node name="Story_UI2" parent="Story_UI" unique_id=2078135075 instance=ExtResource("12_ad63i")]
-position = Vector2(15578.878, 1333.0035)
-scale = Vector2(1.185, 1.185)
-label_right_new_text = "Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
-label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch. Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten."
-new_title = "Tag 3 im Wald"
-
-[node name="Story_UI3" parent="Story_UI" unique_id=415626005 instance=ExtResource("12_ad63i")]
-position = Vector2(19230.033, 106.600586)
-scale = Vector2(1.185, 1.185)
-label_right_new_text = "Ich schaute nach, und sah eine Familie samt kleinem Mädchen. Es sah so aus, als könnte ihnen die Dunkelheit rein gar nichts anhaben. Die reine Liebe, die sich wie eine schützende Blase um sie legte strahlte eine so wohlwollende Wärme aus, dass sie die kalte, drohende Dunkelheit nicht einmal bemerkten.  Ich beobachtete die Familie eine Weile, und ich gestehe, ich weiß nicht mal warum. Nur leider weiß ich, dass mir sowas nie mehr passieren könnte. Warum in aller Welt bräuchte ich das denn? Aber schön wäre es trotzdem."
-label_left_new_text = "Heute habe ich endlich meinen Tempel fertiggestellt. Endlich kann ich die Macht der Dunkelheit erspüren, die Furcht meiner unterworfenen Schatten steigt. Ich fühle, wie ich durch meinen Bau die Energie regelrecht aufsauge. Ich habe mich noch nie so lebendig gefühlt. Sobald ich kräftig genug bin, werde ich in die Welt hinaus gehen, und allen zeigen, welche Fähigkeiten ich besitze! Und doch macht mich etwas, was ich vor kurzem erlebt habe, sehr nachdenklich. Ein leises Kichern drang plötzlich zwischen den Bäumen hervor."
-new_title = "Tag 4 im Wald"
-
-[node name="Story_UI4" parent="Story_UI" unique_id=1313024372 instance=ExtResource("12_ad63i")]
-position = Vector2(22114.852, 1353.7955)
-scale = Vector2(1.185, 1.185)
-label_right_new_text = ""
-label_left_new_text = "Der Tag ist gekommen. Es hat ein Ende. Endlich, endlich, endlich! Jeder soll sehen, wie ich gelitten habe, und das gleiche Leid spüren, welches ich erlebt habe. Alle Liebe werde ich aus dieser verhassten Welt schaffen, noch so jedes kleine Glücksgefühl sollte bestraft werden. Hoffentlich wird diese blöde Energie lange halten. Sonst müsste ich schon wieder in dieses verdammte Loch."
-new_title = "Tag 5 im Wald"
 
 [node name="Background" type="Node" parent="." unique_id=1832912011]
 
@@ -7374,7 +7336,7 @@ scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg9" type="Sprite2D" parent="Background/Parallax2D2" unique_id=575131228]
-position = Vector2(-40003.016, 305.6604)
+position = Vector2(-39673.21, 305.6604)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
@@ -7389,17 +7351,17 @@ scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg4" type="Sprite2D" parent="Background/Parallax2D2" unique_id=841935380]
-position = Vector2(16593.96, 285.28302)
+position = Vector2(16261.129, 285.28305)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg7" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2051980136]
-position = Vector2(27935.855, 306.4151)
+position = Vector2(27270.184, 306.41507)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg8" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1789209960]
-position = Vector2(39287.547, 306.41513)
+position = Vector2(38421.887, 306.4151)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
@@ -7409,17 +7371,17 @@ scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg12" type="Sprite2D" parent="Background/Parallax2D2" unique_id=951169262]
-position = Vector2(50421.887, 306.4151)
+position = Vector2(49623.402, 306.41507)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg13" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1394792761]
-position = Vector2(61676.984, 306.41507)
+position = Vector2(61676.977, 306.41513)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
 [node name="ParallaxDemonWoodsBg10" type="Sprite2D" parent="Background/Parallax2D2" unique_id=530762658]
-position = Vector2(-28803.771, 306.4151)
+position = Vector2(-28473.957, 306.41507)
 scale = Vector2(2.9541667, 3.139706)
 texture = ExtResource("2_u5ghp")
 
@@ -7443,7 +7405,7 @@ blend_mode = 2
 texture = ExtResource("6_irw6p")
 
 [node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_3628d")]
-position = Vector2(-369.0078, -1574)
+position = Vector2(-50040, -152)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=994735179]
 position = Vector2(0, 11.11145)
@@ -7508,6 +7470,131 @@ position = Vector2(11311, -553)
 rotation = -4.712984
 scale = Vector2(2.88, 2.88)
 
+[node name="Spikes7" parent="Enemies" unique_id=439655171 instance=ExtResource("11_vvknj")]
+position = Vector2(-33568.004, -1775)
+rotation = -4.712984
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes8" parent="Enemies" unique_id=2096924005 instance=ExtResource("11_vvknj")]
+position = Vector2(-30859, -3509)
+rotation = -4.712984
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes9" parent="Enemies" unique_id=1728798636 instance=ExtResource("11_vvknj")]
+position = Vector2(-39516, 2634.9998)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes10" parent="Enemies" unique_id=1590282509 instance=ExtResource("11_vvknj")]
+position = Vector2(-18997, 1161)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes11" parent="Enemies" unique_id=807106455 instance=ExtResource("11_vvknj")]
+position = Vector2(-7360, -489)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes12" parent="Enemies" unique_id=1664568800 instance=ExtResource("11_vvknj")]
+position = Vector2(-15959, 5441)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes13" parent="Enemies" unique_id=365533198 instance=ExtResource("11_vvknj")]
+position = Vector2(-13965.001, 5405.9995)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes14" parent="Enemies" unique_id=774012764 instance=ExtResource("11_vvknj")]
+position = Vector2(-10908, 5353)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes15" parent="Enemies" unique_id=544229455 instance=ExtResource("11_vvknj")]
+position = Vector2(-7231, 5289)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes16" parent="Enemies" unique_id=1226071834 instance=ExtResource("11_vvknj")]
+position = Vector2(-21057, 5530)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes17" parent="Enemies" unique_id=1725681223 instance=ExtResource("11_vvknj")]
+position = Vector2(-20382.998, -5851)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes18" parent="Enemies" unique_id=90537618 instance=ExtResource("11_vvknj")]
+position = Vector2(3223.0002, 1219)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes19" parent="Enemies" unique_id=104074740 instance=ExtResource("11_vvknj")]
+position = Vector2(6208, -3338)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes20" parent="Enemies" unique_id=1539302925 instance=ExtResource("11_vvknj")]
+position = Vector2(9611, 3267)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes21" parent="Enemies" unique_id=1369373976 instance=ExtResource("11_vvknj")]
+position = Vector2(12149, 5459.0005)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes22" parent="Enemies" unique_id=1253272989 instance=ExtResource("11_vvknj")]
+position = Vector2(13187, 5459.0005)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes23" parent="Enemies" unique_id=1386881097 instance=ExtResource("11_vvknj")]
+position = Vector2(14903.001, 5517)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes24" parent="Enemies" unique_id=1455978889 instance=ExtResource("11_vvknj")]
+position = Vector2(16432.002, 5474)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes25" parent="Enemies" unique_id=775305522 instance=ExtResource("11_vvknj")]
+position = Vector2(43775, 1659)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes26" parent="Enemies" unique_id=923240641 instance=ExtResource("11_vvknj")]
+position = Vector2(43671, -1515)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes27" parent="Enemies" unique_id=1182005163 instance=ExtResource("11_vvknj")]
+position = Vector2(48386, 5383)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes28" parent="Enemies" unique_id=928193553 instance=ExtResource("11_vvknj")]
+position = Vector2(55538.996, 5429.0005)
+rotation = -1.5882496
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes29" parent="Enemies" unique_id=1021465097 instance=ExtResource("11_vvknj")]
+position = Vector2(59674.008, 3292.0005)
+rotation = 1.4329153
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes30" parent="Enemies" unique_id=1380171999 instance=ExtResource("11_vvknj")]
+position = Vector2(57487, -1967.999)
+rotation = 1.4329153
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes31" parent="Enemies" unique_id=1924796838 instance=ExtResource("11_vvknj")]
+position = Vector2(36229, -5028)
+rotation = 1.4329153
+scale = Vector2(2.88, 2.88)
+
 [node name="TenebraLevelDesign_drawio" type="Sprite2D" parent="." unique_id=1271110164]
 visible = false
 modulate = Color(1, 1, 1, 0.627451)
@@ -7517,7 +7604,7 @@ texture = ExtResource("13_7r2dd")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2022905484]
 position = Vector2(-16, 0)
-tile_map_data = PackedByteArray("AADL+3T/AAACAAAAAAA3/Cf/AAACAAAAAACn++/+AAACAAAAAAA5+53+AAACAAAAAAAV+6D+AAACAAAAAADx+p7+AAACAAAAAADP+p7+AAACAAAAAADR+hz/AAACAAAAAABM+mf/AAACAAAAAAAm+uP+AAACAAAAAACh/LH/AAACAAAAAADN/FX/AAACAAAAAAAR/ab+AAACAAAAAACA/Vz/AAACAAAAAADN/Tn/AAACAAAAAAA//v7+AAACAAAAAAAG/h7/AAACAAAAAACy/kD/AAACAAAAAACm/rz/AAACAAAAAABD/vD/AAACAAAAAAAV/5j/AAACAAAAAAA5/w3/AAACAAAAAADp/zL/AAACAAAAAADq/zL/AAACAAAAAADr/zL/AAACAAAAAAAIADH/AAACAAAAAAAqAC7/AAACAAAAAAD6/9L/AAACAAAAAACKAH7/AAACAAAAAADYABT/AAACAAAAAAD4ABX/AAACAAAAAABHAX//AAACAAAAAACSAUL/AAACAAAAAAAhAt/+AAACAAAAAAD5AY3/AAACAAAAAAAfAuf/AAACAAAAAACsAoD/AAACAAAAAADAAsL/AAACAAAAAABOA5z/AAACAAAAAABPA5z/AAACAAAAAABQA5z/AAACAAAAAABzA5n/AAACAAAAAADZA0L/AAACAAAAAAD/A0L/AAACAAAAAACfBIr+AAACAAAAAADMBIr+AAACAAAAAABQBR//AAACAAAAAACBBHb/AAACAAAAAACsBHX/AAACAAAAAACDBYz+AAACAAAAAACjBYz+AAACAAAAAADFBY/+AAACAAAAAADHBRD/AAACAAAAAADwBRD/AAACAAAAAAAbBhD/AAACAAAAAACfBov+AAACAAAAAADKBon+AAACAAAAAACZBkr/AAACAAAAAAAQBsn/AAACAAAAAAAqBwb/AAACAAAAAABUBwT/AAACAAAAAAB+BwT/AAACAAAAAACIB4f/AAACAAAAAACqB4X/AAACAAAAAADTB3//AAACAAAAAABuCOP/AAACAAAAAACUCN//AAACAAAAAAC+COH/AAACAAAAAACkCXv/AAACAAAAAACjCXv/AAACAAAAAACcCLb+AAACAAAAAADGCLP+AAACAAAAAADlCLb+AAACAAAAAAANCuT+AAACAAAAAACaCrL/AAACAAAAAAC9Cq3/AAACAAAAAADrCi7/AAACAAAAAAAPCyv/AAACAAAAAADiCoH+AAACAAAAAAALC4H+AAACAAAAAAA2C4D+AAACAAAAAABhC37+AAACAAAAAACKC4P+AAACAAAAAACvC3/+AAACAAAAAADVC37+AAACAAAAAAD9C4D+AAACAAAAAAAYDIP+AAACAAAAAAA/DH3+AAACAAAAAAA/DHz+AAACAAAAAAA/DHv+AAACAAAAAABkDHn+AAACAAAAAADNDXz/AAACAAAAAAD8DXz/AAACAAAAAACB+cP+AAACAAAAAABj+TX/AAACAAAAAACN+UL/AAACAAAAAACO+UP/AAACAAAAAAD5+J7/AAACAAAAAAD4+J7/AAACAAAAAAD3+J7/AAACAAAAAAD2+J7/AAACAAAAAAD1+J7/AAACAAAAAADR+J//AAACAAAAAACp+J7/AAACAAAAAADJ94P/AAACAAAAAADK94L/AAACAAAAAAA5+CT/AAACAAAAAABc+Br/AAACAAAAAACA+Bj/AAACAAAAAAC/983+AAACAAAAAACZ987+AAACAAAAAAD89kP/AAACAAAAAADX9kP/AAACAAAAAADv9qz/AAACAAAAAADu9qz/AAACAAAAAADt9qz/AAACAAAAAADK9q//AAACAAAAAACl9q3/AAACAAAAAABR9lb/AAACAAAAAAAv9k3/AAACAAAAAAAP9kX/AAACAAAAAAA89uX+AAACAAAAAABf9uX+AAACAAAAAABi9Rj/AAACAAAAAABs9Zj/AAACAAAAAADi9Gv/AAACAAAAAADJ9Fn/AAACAAAAAACF9NX/AAACAAAAAAAk9Gv/AAACAAAAAAAT9F3/AAACAAAAAACG9PP+AAACAAAAAACF9PP+AAACAAAAAACE9PP+AAACAAAAAACD9PT+AAACAAAAAACC9PT+AAACAAAAAACB9PX+AAACAAAAAABc9PH+AAACAAAAAAA49PH+AAACAAAAAABe8x//AAACAAAAAAA48yH/AAACAAAAAADQ/2gAAgAAAAAAAAAkAGgAAgAAAAAAAAB5AGgAAgAAAAAAAADPAGUAAgAAAAAAAAAlAWEAAgAAAAAAAAB3AVoAAgAAAAAAAADRAVUAAgAAAAAAAAB493cBAgAAAAAAAADO93MBAgAAAAAAAAAm+G4BAgAAAAAAAAB5+GwBAgAAAAAAAADP+GkBAgAAAAAAAAAq+WwBAgAAAAAAAACL+XABAgAAAAAAAADq+W4BAgAAAAAAAABD+nABAgAAAAAAAACU+mwBAgAAAAAAAADx+m4BAgAAAAAAAABJ+2kBAgAAAAAAAACo+2kBAgAAAAAAAAAD/GwBAgAAAAAAAABe/GsBAgAAAAAAAAC0/GsBAgAAAAAAAAAM/WwBAgAAAAAAAABf/XABAgAAAAAAAAC3/XABAgAAAAAAAAAS/mwBAgAAAAAAAABq/nABAgAAAAAAAADA/m4BAgAAAAAAAAAW/24BAgAAAAAAAABv/2wBAgAAAAAAAADP/2sBAgAAAAAAAAAqAGoBAgAAAAAAAACAAGoBAgAAAAAAAADYAGsBAgAAAAAAAAArAW8BAgAAAAAAAACDAW8BAgAAAAAAAADeAWsBAgAAAAAAAAA2Am8BAgAAAAAAAACMAm0BAgAAAAAAAADiAm0BAgAAAAAAAAA7A2sBAgAAAAAAAACbA3IBAgAAAAAAAAD2A3EBAgAAAAAAAABMBHEBAgAAAAAAAACkBHIBAgAAAAAAAAD3BHYBAgAAAAAAAABPBXYBAgAAAAAAAACqBXIBAgAAAAAAAAACBnYBAgAAAAAAAABYBnQBAgAAAAAAAACuBnQBAgAAAAAAAAAHB3IBAgAAAAAAAABiB3ABAgAAAAAAAAC9B28BAgAAAAAAAAATCG8BAgAAAAAAAABrCHABAgAAAAAAAAC+CHQBAgAAAAAAAAAWCXQBAgAAAAAAAABxCXABAgAAAAAAAADJCXQBAgAAAAAAAAAfCnIBAgAAAAAAAAB1CnIBAgAAAAAAAADOCnABAgAAAAAAAAAnC24BAgAAAAAAAACCC20BAgAAAAAAAADYC20BAgAAAAAAAAAwDG4BAgAAAAAAAACDDHIBAgAAAAAAAADbDHIBAgAAAAAAAAA2DW4BAgAAAAAAAACODXIBAgAAAAAAAADkDXABAgAAAAAAAAA6DnABAgAAAAAAAACTDm4BAgAAAAAAAADpDmsBAgAAAAAAAABED2oBAgAAAAAAAACaD2oBAgAAAAAAAADyD2sBAgAAAAAAAABFEG8BAgAAAAAAAACdEG8BAgAAAAAAAAD4EGsBAgAAAAAAAABQEW8BAgAAAAAAAACmEW0BAgAAAAAAAAD8EW0BAgAAAAAAAABVEmsBAgAAAAAAAAAIAeQAAgAAAAAAAABjAeMAAgAAAAAAAAC5AeMAAgAAAAAAAAARAuQAAgAAAAAAAABkAugAAgAAAAAAAAC8AugAAgAAAAAAAAAXA+QAAgAAAAAAAABvA+gAAgAAAAAAAADFA+YAAgAAAAAAAAAbBOYAAgAAAAAAAAB0BOQAAgAAAAAAAAD6BegAAgAAAAAAAABVBucAAgAAAAAAAACrBucAAgAAAAAAAAADB+gAAgAAAAAAAABWB+wAAgAAAAAAAACuB+wAAgAAAAAAAADIBocAAgAAAAAAAAAjB4YAAgAAAAAAAAB5B4YAAgAAAAAAAADRB4cAAgAAAAAAAAAkCIsAAgAAAAAAAAB8CIsAAgAAAAAAAADXCIcAAgAAAAAAAAA0CocAAgAAAAAAAABJCoYAAgAAAAAAAACkCoUAAgAAAAAAAAD6CoUAAgAAAAAAAABSC4YAAgAAAAAAAAClC4oAAgAAAAAAAAAuDpUAAgAAAAAAAACEDpMAAgAAAAAAAADaDpMAAgAAAAAAAAAzD5EAAgAAAAAAAACWA30AAgAAAAAAAADzA30AAgAAAAAAAABKBH0AAgAAAAAAAACjBIMAAgAAAAAAAAD6BIUAAgAAAAAAAABRBYMAAgAAAAAAAACqBYsAAgAAAAAAAAAQBn8AAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AADL+3T/AAACAAAAAAA3/Cf/AAACAAAAAACn++/+AAACAAAAAAA5+53+AAACAAAAAAAV+6D+AAACAAAAAADx+p7+AAACAAAAAADP+p7+AAACAAAAAADR+hz/AAACAAAAAABM+mf/AAACAAAAAAAm+uP+AAACAAAAAACh/LH/AAACAAAAAADN/FX/AAACAAAAAAAR/ab+AAACAAAAAACA/Vz/AAACAAAAAADN/Tn/AAACAAAAAAA//v7+AAACAAAAAAAG/h7/AAACAAAAAACy/kD/AAACAAAAAACm/rz/AAACAAAAAABD/vD/AAACAAAAAAAV/5j/AAACAAAAAAA5/w3/AAACAAAAAADp/zL/AAACAAAAAADq/zL/AAACAAAAAADr/zL/AAACAAAAAAAIADH/AAACAAAAAAAqAC7/AAACAAAAAAD6/9L/AAACAAAAAACKAH7/AAACAAAAAADYABT/AAACAAAAAAD4ABX/AAACAAAAAABHAX//AAACAAAAAACSAUL/AAACAAAAAAAhAt/+AAACAAAAAAD5AY3/AAACAAAAAAAfAuf/AAACAAAAAACsAoD/AAACAAAAAADAAsL/AAACAAAAAABOA5z/AAACAAAAAABPA5z/AAACAAAAAABQA5z/AAACAAAAAABzA5n/AAACAAAAAADZA0L/AAACAAAAAAD/A0L/AAACAAAAAACfBIr+AAACAAAAAADMBIr+AAACAAAAAABQBR//AAACAAAAAACBBHb/AAACAAAAAACsBHX/AAACAAAAAACDBYz+AAACAAAAAACjBYz+AAACAAAAAADFBY/+AAACAAAAAADHBRD/AAACAAAAAADwBRD/AAACAAAAAAAbBhD/AAACAAAAAACfBov+AAACAAAAAADKBon+AAACAAAAAACZBkr/AAACAAAAAAAQBsn/AAACAAAAAAAqBwb/AAACAAAAAABUBwT/AAACAAAAAAB+BwT/AAACAAAAAACIB4f/AAACAAAAAACqB4X/AAACAAAAAADTB3//AAACAAAAAABuCOP/AAACAAAAAACUCN//AAACAAAAAAC+COH/AAACAAAAAACkCXv/AAACAAAAAACjCXv/AAACAAAAAACcCLb+AAACAAAAAADGCLP+AAACAAAAAADlCLb+AAACAAAAAAANCuT+AAACAAAAAACaCrL/AAACAAAAAAC9Cq3/AAACAAAAAADrCi7/AAACAAAAAAAPCyv/AAACAAAAAADiCoH+AAACAAAAAAALC4H+AAACAAAAAAA2C4D+AAACAAAAAABhC37+AAACAAAAAACKC4P+AAACAAAAAACvC3/+AAACAAAAAADVC37+AAACAAAAAAD9C4D+AAACAAAAAAAYDIP+AAACAAAAAAA/DH3+AAACAAAAAAA/DHz+AAACAAAAAAA/DHv+AAACAAAAAABkDHn+AAACAAAAAADNDXz/AAACAAAAAAD8DXz/AAACAAAAAACB+cP+AAACAAAAAABj+TX/AAACAAAAAACN+UL/AAACAAAAAACO+UP/AAACAAAAAAD5+J7/AAACAAAAAAD4+J7/AAACAAAAAAD3+J7/AAACAAAAAAD2+J7/AAACAAAAAAD1+J7/AAACAAAAAADR+J//AAACAAAAAACp+J7/AAACAAAAAADJ94P/AAACAAAAAADK94L/AAACAAAAAAA5+CT/AAACAAAAAABc+Br/AAACAAAAAACA+Bj/AAACAAAAAAC/983+AAACAAAAAACZ987+AAACAAAAAAD89kP/AAACAAAAAADX9kP/AAACAAAAAADv9qz/AAACAAAAAADu9qz/AAACAAAAAADt9qz/AAACAAAAAADK9q//AAACAAAAAACl9q3/AAACAAAAAABR9lb/AAACAAAAAAAv9k3/AAACAAAAAAAP9kX/AAACAAAAAAA89uX+AAACAAAAAABf9uX+AAACAAAAAABi9Rj/AAACAAAAAABs9Zj/AAACAAAAAADi9Gv/AAACAAAAAADJ9Fn/AAACAAAAAACF9NX/AAACAAAAAAAk9Gv/AAACAAAAAAAT9F3/AAACAAAAAACG9PP+AAACAAAAAACF9PP+AAACAAAAAACE9PP+AAACAAAAAACD9PT+AAACAAAAAACC9PT+AAACAAAAAACB9PX+AAACAAAAAABc9PH+AAACAAAAAAA49PH+AAACAAAAAABe8x//AAACAAAAAAA48yH/AAACAAAAAADQ/2gAAgAAAAAAAAAkAGgAAgAAAAAAAAB5AGgAAgAAAAAAAADPAGUAAgAAAAAAAAAlAWEAAgAAAAAAAAB3AVoAAgAAAAAAAADRAVUAAgAAAAAAAAB493cBAgAAAAAAAADO93MBAgAAAAAAAAAm+G4BAgAAAAAA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")
 tile_set = SubResource("TileSet_1vivr")
 use_kinematic_bodies = true
 
@@ -7525,8 +7612,78 @@ use_kinematic_bodies = true
 script = ExtResource("14_k2mw1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=727396898]
-position = Vector2(73660, 4850)
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(65768.5, -1111)
+shape = SubResource("RectangleShape2D_27a24")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1370279065]
+script = ExtResource("15_tjl6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1063652562]
+position = Vector2(81628, -1111)
+shape = SubResource("RectangleShape2D_27a24")
+
+[node name="Story" type="Node" parent="." unique_id=1602665738]
+
+[node name="Story_UI" parent="Story" unique_id=1092067955 instance=ExtResource("12_ad63i")]
+position = Vector2(-46155, 2236)
+scale = Vector2(3.03, 3.03)
+
+[node name="Story_UI2" parent="Story" unique_id=1972848907 instance=ExtResource("12_ad63i")]
+position = Vector2(-29469, -2300)
+scale = Vector2(3.5905497, 3.5905497)
+label_right_new_text = "Und ich hoffe, man kann sie auch erlernen, zu kontrollieren, denn damit ich glücklich leben kann, brauche ich die Dunkelheit. Dafür aber müsste ich die Motten loswerden. Und der beste Weg ist, sie zu vernichten. Ich will den Ursprungsort dieser Tiere finden, und dem Grund auflauern, weshalb sie sich um mich scharen. Ich könnte mir vorstellen, dass es einen Zusammenhang zwischen den Motten und dem Licht gibt. Somit wäre der Ort, wo die Viecher herkommen, eine Lichtquelle. Und die sollte ich so bald wie möglich zerstören."
+label_left_new_text = "Heute habe ich mein neues Lager im Wald aufgeschlagen. Was meine Hoffnung, die Motten loszuwerden, anbelangt, so wurde ich enttäuscht. Sie folgen mir auf Schritt und Tritt. Langsam erscheint mir das ganze merkwürdig. Dass meine Gefühle zu Licht und Dunkelheit so verschieden sind kann kein Zufall sein. Ich habe das Gefühl, Teil einer höheren Macht zu sein. "
+new_title = "Tag 2 im Wald"
+
+[node name="Story_UI5" parent="Story" unique_id=1727871829 instance=ExtResource("12_ad63i")]
+position = Vector2(489, 680)
+scale = Vector2(4.2548013, 4.2548013)
+label_right_new_text = "Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten. Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
+label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch."
+new_title = "Tag 3 im Wald"
+
+[node name="Story_UI3" parent="Story" unique_id=2078135075 instance=ExtResource("12_ad63i")]
+position = Vector2(28394, 1300.0005)
+scale = Vector2(3.5905497, 3.5905497)
+label_right_new_text = "Ich gebe auf! Ständig werden mir Steine vor den Weg gelegt, nie bekomme ich einen Vorteil. Aber gut, nun Schluss damit, es hilft nicht rumzunörgeln. Ich kann die helle Macht zwar nicht zerstören, aber trotzdem stärker als sie sein. Ich werde einen Weg finden, die dunkle Macht zu kontrollieren, etwas bauen was mich stärker macht als das Licht. Ich werde einen Tempel bauen, der mir genau das ermöglichen wird."
+label_left_new_text = "Meine Suche nach der Lichtquelle ist zuende! Nach tagelanger Wanderung habe ich die Quelle endlich zwischen mehreren dicken Kiefern entdeckt. Tatsächlich entpuppte sie sich als Herkunft der Motten. Sie strahlte so hell wie die Sonne selbst, und genauso blendete sie mich auch. Zwar versuchte ich, zum Kern des Ganzen zu kommen, aber ich wurde wie von einer unsichtbaren Hand festgehalten, die mir nicht erlaubte, näher zu treten."
+new_title = "Tag 3 im Wald"
+
+[node name="Story_UI4" parent="Story" unique_id=415626005 instance=ExtResource("12_ad63i")]
+position = Vector2(51558.004, 5043.0005)
+scale = Vector2(3.5905497, 3.5905497)
+label_right_new_text = "Ich schaute nach, und sah eine Familie samt kleinem Mädchen. Es sah so aus, als könnte ihnen die Dunkelheit rein gar nichts anhaben. Die reine Liebe, die sich wie eine schützende Blase um sie legte strahlte eine so wohlwollende Wärme aus, dass sie die kalte, drohende Dunkelheit nicht einmal bemerkten.  Ich beobachtete die Familie eine Weile, und ich gestehe, ich weiß nicht mal warum. Nur leider weiß ich, dass mir sowas nie mehr passieren könnte. Warum in aller Welt bräuchte ich das denn? Aber schön wäre es trotzdem."
+label_left_new_text = "Heute habe ich endlich meinen Tempel fertiggestellt. Endlich kann ich die Macht der Dunkelheit erspüren, die Furcht meiner unterworfenen Schatten steigt. Ich fühle, wie ich durch meinen Bau die Energie regelrecht aufsauge. Ich habe mich noch nie so lebendig gefühlt. Sobald ich kräftig genug bin, werde ich in die Welt hinaus gehen, und allen zeigen, welche Fähigkeiten ich besitze! Und doch macht mich etwas, was ich vor kurzem erlebt habe, sehr nachdenklich. Ein leises Kichern drang plötzlich zwischen den Bäumen hervor."
+new_title = "Tag 4 im Wald"
+
+[node name="Story_UI6" parent="Story" unique_id=1313024372 instance=ExtResource("12_ad63i")]
+position = Vector2(68378, 4953.0005)
+scale = Vector2(3.5905497, 3.5905497)
+label_right_new_text = ""
+label_left_new_text = "Der Tag ist gekommen. Es hat ein Ende. Endlich, endlich, endlich! Jeder soll sehen, wie ich gelitten habe, und das gleiche Leid spüren, welches ich erlebt habe. Alle Liebe werde ich aus dieser verhassten Welt schaffen, noch so jedes kleine Glücksgefühl sollte bestraft werden. Hoffentlich wird diese blöde Energie lange halten. Sonst müsste ich schon wieder in dieses verdammte Loch."
+new_title = "Tag 5 im Wald"
+
+[node name="Motten" parent="." unique_id=1685672916 instance=ExtResource("16_3628d")]
+position = Vector2(-31137, -4389)
+
+[node name="Motten2" parent="." unique_id=219829064 instance=ExtResource("16_3628d")]
+position = Vector2(-19615, -6609.999)
+
+[node name="Motten3" parent="." unique_id=1328510990 instance=ExtResource("16_3628d")]
+position = Vector2(-52063, -4299)
+
+[node name="Motten4" parent="." unique_id=1338391496 instance=ExtResource("16_3628d")]
+position = Vector2(56.998047, -4198.0005)
+
+[node name="Motten5" parent="." unique_id=256687740 instance=ExtResource("16_3628d")]
+position = Vector2(30056, -5342)
+
+[node name="Motten6" parent="." unique_id=213981317 instance=ExtResource("16_3628d")]
+position = Vector2(46373, -7218)
+
+[node name="Motten7" parent="." unique_id=1189716519 instance=ExtResource("16_3628d")]
+position = Vector2(-47856.004, 1998)
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]

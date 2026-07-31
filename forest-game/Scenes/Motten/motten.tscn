@@ -111,11 +111,12 @@ scale = Vector2(4.165, 4.165)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_04rih")
-max_speed = 2.18
-acceleration = 0.22
-max_player_distance = 974
+max_speed = 4.67
+acceleration = 2.705
+max_player_distance = 1144
 min_target_distance = 155.42
 radius = 900.0
+target_distance = 5.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
 position = Vector2(8.163269, 5.442177)
@@ -127,11 +128,9 @@ texture = ExtResource("2_oeexw")
 script = ExtResource("3_oeexw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=858150950]
-visible = false
 shape = SubResource("CircleShape2D_1vivr")
 
 [node name="EinsammelArea2D" type="Area2D" parent="." unique_id=410402075 groups=["Motte"]]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EinsammelArea2D" unique_id=103243578]

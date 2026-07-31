@@ -30,8 +30,7 @@ func rand_move(delta):
 	#eventuele acceleration
 	var direction = target_position - global_position
 	velocity = max_speed * direction
-	velocity = velocity.lerp(target_position,acceleration * get_process_delta_time())
-
+	velocity = velocity.lerp(target_position, acceleration * get_process_delta_time())
 	if direction.length() < target_distance:
 		choose_new_target()
 		
@@ -78,6 +77,8 @@ func die():
 func now_dead():
 	queue_free()
 	
+
+
 func _on_einsammel_area_2d_body_entered(body: Node2D) -> void:
 	if collected: return
 	
@@ -87,7 +88,7 @@ func _on_einsammel_area_2d_body_entered(body: Node2D) -> void:
 		GameManager.add_player_moths(1, false)
 		collected = true
 		folowing_objekt = body
-		var new_parent = get_parent().get_parent().get_node("PlayerMoths")
+		var new_parent = get_tree().current_scene.get_node("PlayerMoths")
 		get_parent().remove_child(self)
 		new_parent.add_child(self)
 		SoundPlayer.play_sound_effect("motte_collected")

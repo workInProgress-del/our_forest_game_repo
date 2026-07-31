@@ -27,6 +27,7 @@ func emit_victory():
 	get_tree().change_scene_to_file("res://Scenes/cutsceneending.tscn")
 
 func respawn_after_victory():
+	you_won = true
 	get_tree().change_scene_to_file("res://Scenes/Levels/level_1.tscn")
 	
 	
