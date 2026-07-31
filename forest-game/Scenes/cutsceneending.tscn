@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://dcuuyd7uiwvwq"]
+[gd_scene format=3 uid="uid://ddxpktqiow8ti"]
 
-[ext_resource type="Shader" uid="uid://buxpx52vgoijy" path="res://shader/cutscenebeginning.gdshader" id="1_cho4r"]
-[ext_resource type="VideoStream" uid="uid://buy0bh8hqdp5g" path="res://Assets/Level1/cutscene_level1startogv.ogv" id="1_d81rp"]
-[ext_resource type="Script" uid="uid://ciik0dy0apio4" path="res://Scripts/cutscenebeginning.gd" id="1_qvd8p"]
+[ext_resource type="Script" uid="uid://ciik0dy0apio4" path="res://Scripts/cutscenebeginning.gd" id="1_27a24"]
+[ext_resource type="VideoStream" uid="uid://dq64kbp622pmu" path="res://Assets/Level1/cutsceneending.ogv" id="2_27a24"]
+[ext_resource type="Shader" uid="uid://buxpx52vgoijy" path="res://shader/cutscenebeginning.gdshader" id="3_esmpn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8vrlf"]
-shader = ExtResource("1_cho4r")
+shader = ExtResource("3_esmpn")
 shader_parameter/brightness = 1.0
 shader_parameter/contrast = 1.15
 shader_parameter/saturation = 0.65
@@ -44,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qvd8p")
+script = ExtResource("1_27a24")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=102036919]
 layout_mode = 0
@@ -53,7 +53,7 @@ offset_top = -54.0
 offset_right = 1825.0
 offset_bottom = 1024.0
 scale = Vector2(1.115, 1.115)
-stream = ExtResource("1_d81rp")
+stream = ExtResource("2_27a24")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1020855456]
 self_modulate = Color(1, 1, 1, 0.34901962)
