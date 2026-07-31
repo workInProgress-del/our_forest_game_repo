@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
 [ext_resource type="Shader" uid="uid://bfmxev1a0n2h0" path="res://Scripts/level_1.gdshader" id="2_chwpn"]
-[ext_resource type="Texture2D" uid="uid://borprsomextv4" path="res://Assets/hintergrund/hintergrund.png" id="2_wrinw"]
+[ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="3_chwpn"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_6444e"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_lsmp6"]
 [ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_xrdnt"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="9_uy8f0"]
 [ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_6r07y"]
 [ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_6ioyp"]
+[ext_resource type="PackedScene" uid="uid://m3ru70cpnhd8" path="res://Scenes/UI/story_ui.tscn" id="11_af3po"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wrinw"]
 render_priority = 0
@@ -106,36 +107,37 @@ texture = ExtResource("1_vk57k")
 
 [node name="ParallaxLayer" type="Parallax2D" parent="Background" unique_id=1522976270]
 material = SubResource("ShaderMaterial_wrinw")
+scroll_scale = Vector2(0.895, 0.895)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1506299203]
-position = Vector2(0, 280)
+position = Vector2(-2309, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1403119757]
-position = Vector2(1771, 280)
+position = Vector2(1116, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1419361566]
-position = Vector2(3538, 280)
+position = Vector2(7913, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1229288239]
-position = Vector2(3538, 280)
+position = Vector2(4509, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Sprite2D5" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1299792321]
-position = Vector2(5301, 280)
+position = Vector2(11377, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Sprite2D6" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=708420]
-position = Vector2(7072.0005, 280)
+position = Vector2(14734.001, 280)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("2_wrinw")
+texture = ExtResource("3_chwpn")
 
 [node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_6444e")]
 z_index = 6
@@ -155,7 +157,7 @@ offset = Vector2(0, -100)
 [node name="WorldBorder" type="StaticBody2D" parent="." unique_id=1819682017]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder" unique_id=1105697142]
-position = Vector2(0, 631)
+position = Vector2(369, 60)
 shape = SubResource("WorldBoundaryShape2D_1vivr")
 
 [node name="PlayerMoths" type="Node" parent="." unique_id=209809334]
@@ -172,7 +174,11 @@ scale = Vector2(0.73, 0.73)
 max_player_distance = 284
 min_target_distance = 130.0
 
+[node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("11_af3po")]
+z_index = 11
+position = Vector2(641, 18)
+
 [node name="Enemies" type="Node" parent="." unique_id=2069477343]
 
 [node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("11_6ioyp")]
-position = Vector2(254, 520)
+position = Vector2(353, 150)

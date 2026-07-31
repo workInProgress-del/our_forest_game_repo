@@ -16,7 +16,7 @@ func physics_update(delta: float) -> void:
 	player.move_and_slide()
 
 	if player.is_on_floor():
-
+		SoundPlayer.play_sound_effect("jump_sound")
 		if is_equal_approx(input_direction_x, 0.0):
 			finished.emit(IDLE)
 		else:
