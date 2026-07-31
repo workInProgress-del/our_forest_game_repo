@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://gxk6aso70ru4"]
 
+[ext_resource type="Script" uid="uid://b0s74h88574fo" path="res://Scripts/level_1.gd" id="1_6r07y"]
 [ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
 [ext_resource type="Shader" uid="uid://bfmxev1a0n2h0" path="res://Scripts/level_1.gdshader" id="2_chwpn"]
 [ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="3_chwpn"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_6r07y"]
 [ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_6ioyp"]
 [ext_resource type="PackedScene" uid="uid://m3ru70cpnhd8" path="res://Scenes/UI/story_ui.tscn" id="11_af3po"]
+[ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="12_6ioyp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wrinw"]
 render_priority = 0
@@ -42,9 +44,9 @@ shader_parameter/ems_str = 0.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 
 [node name="Level1" type="Node2D" unique_id=805981926]
+script = ExtResource("1_6r07y")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
-visible = false
 position = Vector2(538, 354.00003)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
@@ -177,6 +179,10 @@ min_target_distance = 130.0
 [node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("11_af3po")]
 z_index = 11
 position = Vector2(641, 18)
+label_right_new_text = "  Schon wieder eins von den Viechern! Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
+label_left_new_text = " Schon wieder eins von den Viechern. Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
+obsticle_texture = null
+book_texture = ExtResource("12_6ioyp")
 
 [node name="Enemies" type="Node" parent="." unique_id=2069477343]
 

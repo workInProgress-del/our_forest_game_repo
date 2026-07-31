@@ -9,8 +9,11 @@ var sound_effects := {
 	"death_sound": "res://Assets/sounds/gtaSounds-deathSound.wav",
 	"motte_collected": "res://Assets/sounds/gtaSounds-motteVerlieren1.wav",
 	"motte_lost": "res://Assets/sounds/gtaSounds-motteFangen.wav",
-	"hover_sound": "res://Assets/sounds/gtaSounds-buttonHovered.mp3"
+	"hover_sound": "res://Assets/sounds/gtaSounds-buttonHovered.mp3",
+	"respawn_sound": "res://Assets/sounds/gtaSounds-respawnSound.wav"
 }
+
+@onready var main_menu_music: AudioStreamPlayer = $MainMenuMusic
 
 @onready var walking_sound: AudioStreamPlayer = $WalkingSound
 @onready var player_background: AudioStreamPlayer = $AudioStreamPlayerBackground
@@ -21,12 +24,16 @@ var volume = 0.0
 var step_timer := 0.0
 var step_interval := 0.4
 var player_is_walking = false
+var main_menu_active = true
+var main_menu_music_timer = 0
+var main_menu_length:= 52.0
 
 func _ready():
 	play_random_sound()
 	play_random_sound_background()
 	var wav_stream := walking_sound.stream as AudioStreamWAV
 	wav_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	start_main_menu_music_loop()
 
 
 
@@ -38,6 +45,23 @@ func _process(delta):
 			step_timer = step_interval
 	else:
 		step_timer = 0.0
+	if not main_menu_active:
+		stop_music()
+
+	
+func start_main_menu_music_loop() -> void:
+	await get_tree().create_timer(0.1).timeout  # kleiner Delay beim Start
+	while true:
+		if main_menu_active:
+			play_music()
+		await get_tree().create_timer(main_menu_length).timeout
+
+func play_music():
+	main_menu_music.play()
+	
+func stop_music():
+	main_menu_music.stop()
+	
 
 func play_step():
 	walking_sound.pitch_scale = randf_range(0.95, 1.05)

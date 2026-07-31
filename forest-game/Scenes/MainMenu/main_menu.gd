@@ -5,9 +5,10 @@ extends Control
 @onready var quit_button: Button = %QuitButton
 
 
+
 func _ready() -> void:
 	$AnimationPlayer.play("open")
-
+	SoundPlayer.main_menu_active = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
