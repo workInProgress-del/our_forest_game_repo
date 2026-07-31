@@ -1583,12 +1583,14 @@ script = ExtResource("4_gwnis")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1375241025]
 unique_name_in_owner = true
+visible = false
 position = Vector2(1109.6774, -229.03227)
 sprite_frames = SubResource("SpriteFrames_1vivr")
 animation = &"move"
 frame_progress = 0.9730911
 
 [node name="texturen" type="Node2D" parent="." unique_id=1223864244]
+unique_name_in_owner = true
 position = Vector2(12.903225, -6.4516134)
 
 [node name="FußRechtsPerson" type="Sprite2D" parent="texturen" unique_id=1363301743]

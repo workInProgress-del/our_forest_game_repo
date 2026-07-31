@@ -4,7 +4,8 @@ class_name Player extends CharacterBody2D
 @export var gravity := 4000.0
 @export var jump_impulse := 1800.0
 @export var air_control := 0.9
-@onready var animation_player: AnimatedSprite2D = %AnimationPlayer
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+@onready var texturen: Node2D = %texturen
 
 
 
