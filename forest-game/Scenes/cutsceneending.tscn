@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ddxpktqiow8ti"]
 
-[ext_resource type="Script" uid="uid://ciik0dy0apio4" path="res://Scripts/cutscenebeginning.gd" id="1_27a24"]
+[ext_resource type="Script" uid="uid://dgx4x2c0n8prn" path="res://Scenes/cutsceneending.gd" id="1_27a24"]
 [ext_resource type="VideoStream" uid="uid://dq64kbp622pmu" path="res://Assets/Level1/cutsceneending.ogv" id="2_27a24"]
 [ext_resource type="Shader" uid="uid://buxpx52vgoijy" path="res://shader/cutscenebeginning.gdshader" id="3_esmpn"]
 

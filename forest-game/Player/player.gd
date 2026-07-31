@@ -7,7 +7,9 @@ class_name Player extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var texturen: Node2D = %texturen
 
-
+func _ready() -> void:
+	if GameManager.you_won:
+		global_position = Vector2(72236.813, 4285) 
 
 func take_damage(amount: int) -> void:
 	GameManager.delete_player_moths(amount)

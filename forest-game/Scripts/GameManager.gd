@@ -6,10 +6,11 @@ var player_moths = 0
 signal added_player_moths
 signal deleted_player_moths
 signal game_ended
+var you_won = false
 
 func _ready() -> void:
 	player_moths = 3
-	
+	you_won =false
 
 func add_player_moths(amount: int, new_moth: bool):
 	player_moths += amount
@@ -25,6 +26,11 @@ func delete_player_moths(amount: int):
 func emit_victory():
 	get_tree().change_scene_to_file("res://Scenes/cutsceneending.tscn")
 
+func respawn_after_victory():
+	get_tree().change_scene_to_file("res://Scenes/Levels/level_1.tscn")
+	
+	
+	
 func end_game():
 	game_ended.emit()
 	

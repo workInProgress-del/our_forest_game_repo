@@ -9,6 +9,7 @@ extends Control
 func _ready() -> void:
 	$AnimationPlayer.play("open")
 	SoundPlayer.main_menu_active = true
+	GameManager.you_won = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
