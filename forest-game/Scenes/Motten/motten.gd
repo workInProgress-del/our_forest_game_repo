@@ -18,6 +18,7 @@ var angle_diff = 0.0
 var collected = false
 
 func _ready():
+	print("start")
 	randomize()
 	center = global_position
 	choose_new_target()
@@ -33,58 +34,67 @@ func rand_move(delta):
 	velocity = velocity.lerp(target_position, acceleration * get_process_delta_time())
 	if direction.length() < target_distance:
 		choose_new_target()
-		
+
 	var target_angle = global_position.angle_to_point(target_position)
 	var base_turn_speed = 3.0
 	var rotation_speed = base_turn_speed / max(0.5, angle_diff) # Dreht langsamer bei großen Winkeln
 	
 	rotation = lerp_angle(rotation, target_angle, rotation_speed * delta)
 
-#	if cur_velocity > speed:
-#		cur_velocity = speed
 
 	move_and_slide()
 
 func choose_new_target():
+	print("New Target")
 	var angle = randf_range(0.0, TAU)
 	var distance = 0.0
-	
-	if folowing_objekt:
+
+	if folowing_objekt != null:
 		if global_position.distance_to(folowing_objekt.position) < max_player_distance:
+			print("target")
 			while distance < min_target_distance:
 				distance = sqrt(randf()) * radius
 			get_target(distance, angle)
 		else:
+			print("target_2")
 			target_position = folowing_objekt.position
 			center = folowing_objekt.position
 	else:
+		print("target_3")
 		while distance < min_target_distance:
 			distance = sqrt(randf()) * radius
 		get_target(distance, angle)
 
 
+
 func get_target(distance,angle):
+	print("position get")
 	target_position = center + Vector2(
 			cos(angle),
 			sin(angle)
 		) * distance
+	print(angle)
+	print(distance)
 
 func die():
+	print("die")
 	SoundPlayer.play_sound_effect("motte_lost")
 	$PointLight2D.died = true
 
-	
+
 func now_dead():
 	queue_free()
-	
+
 
 
 func _on_einsammel_area_2d_body_entered(body: Node2D) -> void:
+	print("collected")
 	if collected: return
 	
 	var body_group = body.get_groups()
 
 	if "Player" in body_group:
+		print(body_group)
 		GameManager.add_player_moths(1, false)
 		collected = true
 		folowing_objekt = body

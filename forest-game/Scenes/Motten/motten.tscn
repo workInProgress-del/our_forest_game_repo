@@ -113,14 +113,14 @@ collision_mask = 0
 script = ExtResource("1_04rih")
 max_speed = 4.67
 acceleration = 2.705
-max_player_distance = 1144
+max_player_distance = 2516
 min_target_distance = 155.42
-radius = 900.0
-target_distance = 5.0
+radius = 903.0
+target_distance = 156.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
 position = Vector2(8.163269, 5.442177)
-scale = Vector2(3.698, 3.854)
+scale = Vector2(4.976, 5.169)
 color = Color(0.77254903, 0.77254903, 0.78039217, 1)
 energy = 2.64
 blend_mode = 2

@@ -7405,12 +7405,12 @@ blend_mode = 2
 texture = ExtResource("6_irw6p")
 
 [node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_3628d")]
-position = Vector2(-50040, -152)
+position = Vector2(1728.999, -3087)
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=994735179]
 position = Vector2(0, 11.11145)
-scale = Vector2(6.028, 5.726)
-energy = 2.65
+scale = Vector2(4.7, 4.461)
+energy = 1.74
 blend_mode = 2
 texture = ExtResource("6_irw6p")
 script = ExtResource("7_31phq")
@@ -7663,25 +7663,33 @@ label_right_new_text = ""
 label_left_new_text = "Der Tag ist gekommen. Es hat ein Ende. Endlich, endlich, endlich! Jeder soll sehen, wie ich gelitten habe, und das gleiche Leid spüren, welches ich erlebt habe. Alle Liebe werde ich aus dieser verhassten Welt schaffen, noch so jedes kleine Glücksgefühl sollte bestraft werden. Hoffentlich wird diese blöde Energie lange halten. Sonst müsste ich schon wieder in dieses verdammte Loch."
 new_title = "Tag 5 im Wald"
 
-[node name="Motten" parent="." unique_id=1685672916 instance=ExtResource("16_3628d")]
-position = Vector2(-31137, -4389)
+[node name="motten" type="Node2D" parent="." unique_id=9058348]
 
-[node name="Motten2" parent="." unique_id=219829064 instance=ExtResource("16_3628d")]
+[node name="Motten" parent="motten" unique_id=1685672916 instance=ExtResource("16_3628d")]
+position = Vector2(-31137, -4389)
+max_speed = 2.18
+acceleration = 0.22
+max_player_distance = 947
+min_target_distance = 155.0
+radius = 900.0
+target_distance = 10.0
+
+[node name="Motten2" parent="motten" unique_id=219829064 instance=ExtResource("16_3628d")]
 position = Vector2(-19615, -6609.999)
 
-[node name="Motten3" parent="." unique_id=1328510990 instance=ExtResource("16_3628d")]
+[node name="Motten3" parent="motten" unique_id=1328510990 instance=ExtResource("16_3628d")]
 position = Vector2(-52063, -4299)
 
-[node name="Motten4" parent="." unique_id=1338391496 instance=ExtResource("16_3628d")]
+[node name="Motten4" parent="motten" unique_id=1338391496 instance=ExtResource("16_3628d")]
 position = Vector2(56.998047, -4198.0005)
 
-[node name="Motten5" parent="." unique_id=256687740 instance=ExtResource("16_3628d")]
+[node name="Motten5" parent="motten" unique_id=256687740 instance=ExtResource("16_3628d")]
 position = Vector2(30056, -5342)
 
-[node name="Motten6" parent="." unique_id=213981317 instance=ExtResource("16_3628d")]
+[node name="Motten6" parent="motten" unique_id=213981317 instance=ExtResource("16_3628d")]
 position = Vector2(46373, -7218)
 
-[node name="Motten7" parent="." unique_id=1189716519 instance=ExtResource("16_3628d")]
+[node name="Motten7" parent="motten" unique_id=1189716519 instance=ExtResource("16_3628d")]
 position = Vector2(-47856.004, 1998)
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
