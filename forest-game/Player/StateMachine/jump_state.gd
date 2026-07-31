@@ -18,8 +18,9 @@ func physics_update(delta: float) -> void:
 	if player.velocity.y >= 0:
 		finished.emit(FALLING)
 
-func _on_prime_jump_finished():
+func _on_prime_jump_finished(_anim_name: String):
 	player.velocity.y = -player.jump_impulse
 	jump_started = true
 	SoundPlayer.play_sound_effect("jump_sound")
+	player.animation_player.play("jump")
 	player.animation_player.animation_finished.disconnect(_on_prime_jump_finished)
