@@ -1,21 +1,20 @@
 [gd_scene format=3 uid="uid://b4d8xdxmp4lt2"]
 
 [ext_resource type="Script" uid="uid://yhyera7jhblu" path="res://Scripts/spikes.gd" id="1_gwqs2"]
-[ext_resource type="Texture2D" uid="uid://bbi7h04080ipt" path="res://Assets/Level1/Bush (52).png" id="2_tdnaf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
-size = Vector2(247, 144)
+[ext_resource type="Texture2D" uid="uid://cekaqed1l6u8v" path="res://Scenes/Levels/dornen.png" id="2_tdnaf"]
 
 [node name="Spikes" type="Area2D" unique_id=896906642]
+scale = Vector2(3.715, 3.715)
 script = ExtResource("1_gwqs2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=190088304]
-position = Vector2(113.5, 62)
-shape = SubResource("RectangleShape2D_1vivr")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1147096032]
+position = Vector2(3, 99)
+scale = Vector2(1, 0.5791512)
+polygon = PackedVector2Array(-11, -103.59989, 94, -157.1265, 157, -98.4199, 193, -89.786575, 234, -62.159935, 186, -17.266647, 124, -88.059906, 60, -88.059906, 20, -18.993317, 3, -1.7266693, -15, -53.52661)
 
 [node name="TextureRect" type="Sprite2D" parent="." unique_id=12830113]
-position = Vector2(116, 64)
-scale = Vector2(4.505, 4.505)
+position = Vector2(207.00002, 76)
+scale = Vector2(0.17, 0.17)
 texture = ExtResource("2_tdnaf")
 
 [connection signal="body_entered" from="." to="." method="_on_area_2d_body_entered"]

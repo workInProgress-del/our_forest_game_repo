@@ -7443,7 +7443,34 @@ script = ExtResource("9_fayjm")
 [node name="Enemies" type="Node" parent="." unique_id=2069477343]
 
 [node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("11_vvknj")]
-position = Vector2(107, -1449)
+position = Vector2(18626.998, -2670.9998)
+rotation = -1.0383029
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes2" parent="Enemies" unique_id=2008071032 instance=ExtResource("11_vvknj")]
+position = Vector2(16444, 1487)
+rotation = -1.6623253
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes3" parent="Enemies" unique_id=1741288759 instance=ExtResource("11_vvknj")]
+position = Vector2(-10358, -2972)
+rotation = -1.6623253
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes4" parent="Enemies" unique_id=559493358 instance=ExtResource("11_vvknj")]
+position = Vector2(-26848, -5434)
+rotation = -1.6623253
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes5" parent="Enemies" unique_id=1699011973 instance=ExtResource("11_vvknj")]
+position = Vector2(14275, 1667.0002)
+rotation = -2.0147119
+scale = Vector2(2.88, 2.88)
+
+[node name="Spikes6" parent="Enemies" unique_id=724733503 instance=ExtResource("11_vvknj")]
+position = Vector2(11311, -553)
+rotation = -4.712984
+scale = Vector2(2.88, 2.88)
 
 [node name="TenebraLevelDesign_drawio" type="Sprite2D" parent="." unique_id=1271110164]
 visible = false
