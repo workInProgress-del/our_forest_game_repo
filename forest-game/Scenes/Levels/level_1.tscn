@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_31phq"]
 [ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="8_7hll7"]
 [ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="9_fayjm"]
-[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_nojx8"]
 [ext_resource type="Texture2D" uid="uid://xbgxecifala4" path="res://Scenes/Levels/plattform 3.png" id="11_hwvp3"]
 [ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_vvknj"]
 [ext_resource type="PackedScene" uid="uid://m3ru70cpnhd8" path="res://Scenes/UI/story_ui.tscn" id="12_ad63i"]
@@ -21,6 +20,7 @@
 texture = ExtResource("11_hwvp3")
 texture_region_size = Vector2i(666, 1548)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-321.6891, -255.78198, 224.39758, -274.61255, 262.05884, 205.56714, -277.75098, 227.53613)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7r2dd"]
 texture = ExtResource("12_afv7b")
@@ -327,6 +327,7 @@ texture_region_size = Vector2i(220, 455)
 61:53/0 = 0
 62:53/0 = 0
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-321.6891, -255.78198, 224.39758, -274.61255, 262.05884, 205.56714, -277.75098, 227.53613)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjl6l"]
 texture = ExtResource("13_k2mw1")
@@ -7297,8 +7298,10 @@ texture_region_size = Vector2i(2194, 1878)
 74:115/0 = 0
 75:115/0 = 0
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-255.02112, -379.0854, 1008.5969, -388.27533, 1022.38184, 889.1276, -241.23608, 875.3427)
 
 [sub_resource type="TileSet" id="TileSet_1vivr"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_afv7b")
 sources/1 = SubResource("TileSetAtlasSource_7r2dd")
 sources/2 = SubResource("TileSetAtlasSource_tjl6l")
@@ -7307,7 +7310,6 @@ sources/2 = SubResource("TileSetAtlasSource_tjl6l")
 script = ExtResource("1_hwvp3")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
-visible = false
 position = Vector2(538, 354.00003)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
@@ -7386,6 +7388,7 @@ script = ExtResource("7_31phq")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1561387044]
 offset = Vector2(0, -100)
+zoom = Vector2(0.26, 0.26)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1819682017]
 
@@ -7401,12 +7404,6 @@ script = ExtResource("8_7hll7")
 [node name="CollectableMoths" type="Node" parent="." unique_id=186812114]
 unique_name_in_owner = true
 script = ExtResource("9_fayjm")
-
-[node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("10_nojx8")]
-position = Vector2(715, 495.00003)
-scale = Vector2(0.73, 0.73)
-max_player_distance = 284
-min_target_distance = 130.0
 
 [node name="Enemies" type="Node" parent="." unique_id=2069477343]
 

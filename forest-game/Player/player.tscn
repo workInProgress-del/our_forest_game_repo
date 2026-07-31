@@ -1551,7 +1551,7 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1175084695 groups=["Player"]]
 position = Vector2(1.0000001, -0.99999994)
-scale = Vector2(0.31, 0.31)
+scale = Vector2(1.575, 1.575)
 script = ExtResource("1_btcbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=205317139]

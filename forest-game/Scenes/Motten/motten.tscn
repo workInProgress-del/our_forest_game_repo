@@ -107,15 +107,15 @@ _data = {
 }
 
 [node name="Motten" type="CharacterBody2D" unique_id=1685672916 groups=["Motte"]]
-scale = Vector2(0.735, 0.735)
+scale = Vector2(4.165, 4.165)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_04rih")
-max_speed = 1.72
-acceleration = 0.17
-max_player_distance = 169
-radius = 300.0
-target_distance = 30.0
+max_speed = 2.18
+acceleration = 0.22
+max_player_distance = 974
+min_target_distance = 155.42
+radius = 900.0
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1514434360]
 position = Vector2(8.163269, 5.442177)
