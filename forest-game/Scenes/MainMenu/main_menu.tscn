@@ -4,6 +4,40 @@
 [ext_resource type="PackedScene" uid="uid://i7b2y84k3rdx" path="res://Scenes/audio_player.tscn" id="3_0qgbs"]
 [ext_resource type="Script" uid="uid://invfn6yqr33u" path="res://Scripts/button_class.gd" id="3_adu2g"]
 [ext_resource type="FontFile" uid="uid://lg2h53lvf7k5" path="res://Assets/Fonts/BadHandwriter.ttf" id="3_qgdf6"]
+[ext_resource type="Shader" uid="uid://buxpx52vgoijy" path="res://shader/cutscenebeginning.gdshader" id="5_adu2g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0l8wx"]
+shader = ExtResource("5_adu2g")
+shader_parameter/brightness = 1.0
+shader_parameter/contrast = 1.15
+shader_parameter/saturation = 0.65
+shader_parameter/gamma = 1.2
+shader_parameter/night_vision_tint = 0.35
+shader_parameter/decay_tint = 0.0
+shader_parameter/color_temp = -0.15
+shader_parameter/curvature = 0.12
+shader_parameter/corner_soften = 0.08
+shader_parameter/vignette_strength = 0.5
+shader_parameter/scanline_strength = 0.85
+shader_parameter/scanline_density = 1.2
+shader_parameter/interlace_strength = 0.3
+shader_parameter/chroma_shift_px = 2.5
+shader_parameter/chroma_shift_y_px = 0.5
+shader_parameter/luma_smear_px = 3.0
+shader_parameter/jitter_px = 2.0
+shader_parameter/wobble_px = 2.5
+shader_parameter/wobble_speed = 1.0
+shader_parameter/tape_noise = 0.3
+shader_parameter/tracking_lines = 0.4
+shader_parameter/white_specks = 0.15
+shader_parameter/roll_speed = 0.08
+shader_parameter/roll_strength = 0.2
+shader_parameter/flicker_strength = 0.15
+shader_parameter/flicker_frequency = 2.0
+shader_parameter/dropout_chance = 0.02
+shader_parameter/dropout_duration = 0.3
+shader_parameter/glow_strength = 0.3
+shader_parameter/glow_threshold = 0.6
 
 [sub_resource type="LabelSettings" id="LabelSettings_470mv"]
 font = ExtResource("3_qgdf6")
@@ -126,6 +160,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3w4mj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1176281479]
+self_modulate = Color(1, 1, 1, 0.1764706)
+material = SubResource("ShaderMaterial_0l8wx")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.391235
+offset_top = -36.52173
+offset_right = 68.087036
+offset_bottom = 62.869507
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=730100429]
 layout_mode = 0

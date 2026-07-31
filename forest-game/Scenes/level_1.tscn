@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://dthk0mhvlqkdp"]
+
+[ext_resource type="Script" uid="uid://b0s74h88574fo" path="res://Scripts/level_1.gd" id="1_6r07y"]
+[ext_resource type="Texture2D" uid="uid://d0kl6iea7svek" path="res://Assets/parallax_demon_woods_pack/layers/parallax-demon-woods-bg.png" id="1_vk57k"]
+[ext_resource type="Shader" uid="uid://bfmxev1a0n2h0" path="res://Scripts/level_1.gdshader" id="2_chwpn"]
+[ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="3_chwpn"]
+[ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_6444e"]
+[ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_lsmp6"]
+[ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_xrdnt"]
+[ext_resource type="Script" uid="uid://rkmm8iqb5v1l" path="res://Scenes/player_moths.gd" id="8_af3po"]
+[ext_resource type="Script" uid="uid://c7ukn47ln83m7" path="res://Scripts/collectable_moths.gd" id="9_uy8f0"]
+[ext_resource type="PackedScene" uid="uid://dmseyaullgy36" path="res://Scenes/Motten/motten.tscn" id="10_6r07y"]
+[ext_resource type="PackedScene" uid="uid://b4d8xdxmp4lt2" path="res://Scenes/Enemies/spikes.tscn" id="11_6ioyp"]
+[ext_resource type="PackedScene" uid="uid://m3ru70cpnhd8" path="res://Scenes/UI/story_ui.tscn" id="11_af3po"]
+[ext_resource type="Texture2D" uid="uid://dohu4q8w1uwtc" path="res://icon.svg" id="12_6ioyp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wrinw"]
+render_priority = 0
+shader = ExtResource("2_chwpn")
+shader_parameter/light = Color(0, 0, 0, 1)
+shader_parameter/light_power = 0.0
+shader_parameter/light_str = 0.0
+shader_parameter/fresnel_str = 0.0
+shader_parameter/rim_pow = 0.0
+shader_parameter/rim_color = Color(0, 0, 0, 1)
+shader_parameter/rim_color_str = 0.0
+shader_parameter/rim_ems_str = 0.0
+shader_parameter/rim_ems_pow = 0.0
+shader_parameter/rim_ems_str2 = 0.0
+shader_parameter/rim_ems_pow2 = 0.0
+shader_parameter/rim_color2 = Color(0, 0, 0, 1)
+shader_parameter/rim_color_str2 = 0.0
+shader_parameter/mix_rou = 0.0
+shader_parameter/max_rou = 0.0
+shader_parameter/city_dark = 0.0
+shader_parameter/city_light = 0.0
+shader_parameter/Cloud = 0.0
+shader_parameter/Cloud_speed = 0.0
+shader_parameter/Cloud_color = Color(0, 0, 0, 1)
+shader_parameter/CloudNormal_scale = 0.0
+shader_parameter/plane_Normal_Scale = 0.0
+shader_parameter/ems_str = 0.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
+
+[node name="Level1" type="Node2D" unique_id=805981926]
+script = ExtResource("1_6r07y")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
+position = Vector2(538, 354.00003)
+scale = Vector2(1.0000001, 1.0000001)
+color = Color(0, 0, 0, 1)
+energy = 1.84
+blend_mode = 2
+
+[node name="Background" type="Node" parent="." unique_id=1832912011]
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=1430556602]
+visible = false
+z_index = -29
+scale = Vector2(1.325, 1.325)
+scroll_scale = Vector2(0.805, 0.805)
+scroll_offset = Vector2(-7, -125)
+
+[node name="ParallaxDemonWoodsBg" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1585242589]
+position = Vector2(608, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg2" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2341620]
+position = Vector2(2000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg3" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1458512369]
+position = Vector2(4000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg4" type="Sprite2D" parent="Background/Parallax2D2" unique_id=841935380]
+position = Vector2(3000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg7" type="Sprite2D" parent="Background/Parallax2D2" unique_id=2051980136]
+position = Vector2(-718.5641, 348.15384)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg8" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1789209960]
+position = Vector2(-1916.0256, 348.0769)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg10" type="Sprite2D" parent="Background/Parallax2D2" unique_id=530762658]
+position = Vector2(-718.5641, 348.15384)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg5" type="Sprite2D" parent="Background/Parallax2D2" unique_id=30600919]
+position = Vector2(6000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxDemonWoodsBg6" type="Sprite2D" parent="Background/Parallax2D2" unique_id=839196835]
+position = Vector2(5000, 348)
+scale = Vector2(2.9541667, 3.139706)
+texture = ExtResource("1_vk57k")
+
+[node name="ParallaxLayer" type="Parallax2D" parent="Background" unique_id=1522976270]
+material = SubResource("ShaderMaterial_wrinw")
+scroll_scale = Vector2(0.895, 0.895)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1506299203]
+position = Vector2(-2309, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1403119757]
+position = Vector2(1116, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1419361566]
+position = Vector2(7913, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1229288239]
+position = Vector2(4509, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=1299792321]
+position = Vector2(11377, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=708420]
+position = Vector2(14734.001, 280)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_chwpn")
+
+[node name="Player" parent="." unique_id=1175084695 instance=ExtResource("5_6444e")]
+z_index = 6
+position = Vector2(1.0000305, 5.000122)
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=994735179]
+position = Vector2(0, 11.11145)
+scale = Vector2(6.028, 5.726)
+energy = 2.65
+blend_mode = 2
+texture = ExtResource("6_lsmp6")
+script = ExtResource("7_xrdnt")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1561387044]
+offset = Vector2(0, -100)
+
+[node name="WorldBorder" type="StaticBody2D" parent="." unique_id=1819682017]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBorder" unique_id=1105697142]
+position = Vector2(369, 60)
+shape = SubResource("WorldBoundaryShape2D_1vivr")
+
+[node name="PlayerMoths" type="Node" parent="." unique_id=209809334]
+unique_name_in_owner = true
+script = ExtResource("8_af3po")
+
+[node name="CollectableMoths" type="Node" parent="." unique_id=186812114]
+unique_name_in_owner = true
+script = ExtResource("9_uy8f0")
+
+[node name="Motten" parent="CollectableMoths" unique_id=1685672916 instance=ExtResource("10_6r07y")]
+position = Vector2(715, 495.00003)
+scale = Vector2(0.73, 0.73)
+max_player_distance = 284
+min_target_distance = 130.0
+
+[node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("11_af3po")]
+z_index = 11
+position = Vector2(641, 18)
+label_right_new_text = "  Schon wieder eins von den Viechern! Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
+label_left_new_text = " Schon wieder eins von den Viechern. Heute bin ich samt meiner Ausrüstung in den Wald nahe meines Heimatdorfes ... gezogen. Ich hielt es nicht mehr aus, andere Kinder glücklich mit ihren Müttern und Vätern zu sehen, während meinen Eltern gemeinsame Zeit mit ihrem Kind als verschwendet vorkam. Ich verabschiedete mich ein letztes Mal, und wie so oft ließen sie mich ohne Weiteres ziehen."
+obsticle_texture = null
+book_texture = ExtResource("12_6ioyp")
+
+[node name="Enemies" type="Node" parent="." unique_id=2069477343]
+
+[node name="Spikes" parent="Enemies" unique_id=896906642 instance=ExtResource("11_6ioyp")]
+position = Vector2(353, 150)

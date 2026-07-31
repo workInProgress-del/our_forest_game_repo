@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b1dncvvdv7ntp"]
 
+[ext_resource type="Script" uid="uid://b0s74h88574fo" path="res://Scripts/level_1.gd" id="1_hwvp3"]
 [ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="2_u5ghp"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_3628d"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_irw6p"]
@@ -14,6 +15,7 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1vivr"]
 
 [node name="Level1" type="Node2D" unique_id=805981926]
+script = ExtResource("1_hwvp3")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
 visible = false
