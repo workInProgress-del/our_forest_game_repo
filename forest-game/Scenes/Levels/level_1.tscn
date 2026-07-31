@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b0s74h88574fo" path="res://Scripts/level_1.gd" id="1_hwvp3"]
 [ext_resource type="Texture2D" uid="uid://boabswss8wno7" path="res://Assets/hintergrund/hintergrund ganz.png" id="2_u5ghp"]
+[ext_resource type="Texture2D" uid="uid://k1kdxj4mvqoe" path="res://Scenes/Levels/zelt (1).png" id="3_k2mw1"]
 [ext_resource type="PackedScene" uid="uid://bw6f6neehyr6i" path="res://Player/player.tscn" id="5_3628d"]
 [ext_resource type="Texture2D" uid="uid://dijla4pisrrw8" path="res://Lights/main.png" id="6_irw6p"]
 [ext_resource type="Script" uid="uid://bvsiik51swubn" path="res://Scripts/point_light_2d.gd" id="7_31phq"]
@@ -7310,6 +7311,7 @@ sources/2 = SubResource("TileSetAtlasSource_tjl6l")
 script = ExtResource("1_hwvp3")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1548756406]
+visible = false
 position = Vector2(538, 354.00003)
 scale = Vector2(1.0000001, 1.0000001)
 color = Color(0, 0, 0, 1)
@@ -7317,8 +7319,9 @@ energy = 1.84
 blend_mode = 2
 
 [node name="Story_UI" parent="." unique_id=1092067955 instance=ExtResource("12_ad63i")]
-position = Vector2(573, 535)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(1341, 692)
+scale = Vector2(7.1, 7.1)
+obsticle_texture = ExtResource("3_k2mw1")
 
 [node name="Background" type="Node" parent="." unique_id=1832912011]
 
